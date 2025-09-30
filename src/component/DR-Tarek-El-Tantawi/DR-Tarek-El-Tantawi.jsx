@@ -5,6 +5,7 @@ import InsightsSection from "../home/InsightsSwction";
 import Footer from "../sharedComponents/Footer";
 import HeroSection from "../sharedComponents/HeroSection";
 import Doctor from "../../assets/images/Doctor.webp";
+import tarek from "../../assets/images/tantawy.webp";
 import WhoWeAreSection from "../home/WhoWeAreSection";
 import ConsultingSection from "../home/ConsultingSection";
 import benfit from "../../assets/images/beneft.webp";
@@ -23,13 +24,15 @@ import Strategic from "../../assets/images/Strategic.webp";
 import model  from "../../assets/images/Model.webp";
 import Governmental from "../../assets/images/Governmental.webp";
 import Human from "../../assets/images/Human.webp";
-import Corporate from "../../assets/images/Coparate.webp";
-import Coaching from "../../assets/images/Coaching.webp";
+import Corporate from "../../assets/images/japan.webp";
+import Coaching from "../../assets/images/japan1.webp";
 import Brand from "../../assets/images/Brand.webp";
 import LocationSection from '../sharedComponents/LocationSection'
 import ContactUs from "../sharedComponents/ContactUs";
 import MapSection from "../SingleService/MapSection";
 import ProgramsSection  from '../DR-Tarek-El-Tantawi/ProgramsSection';
+import doctor from "../../assets/images/drtantawy.webp"; 
+
 const insightsData = [
   {
     image: Strategic,
@@ -118,13 +121,20 @@ const tarektantawi = () => {
     <main className="relative w-full bg-custom-gradient-bg">
       <HeaderLayout />
       <HeroSection
-        backgroundImage={Doctor}
+        backgroundImage={tarek}
         title="DR. Tarek El Tantawi "
         buttonText="Book Your Consultation"
         description="With decades of entrepreneurial vision, Tarek El Tantawi has led hundreds of projects, delivering innovative consulting solutions and effective restructuring strategies across diverse industries, regionally and globally."
       />
       <section className="max-container ">
-        <WhoWeAreSection />
+        <WhoWeAreSection
+          mobileTitle="About Dr. Tarek El Tantawi"
+          mobileDescription="For many years, the entrepreneurial vision of businessman and corporate restructuring consultant Tarek El Tantawi has flourished..."
+          imageSrc={doctor}
+          desktopTitle="About Dr. Tarek El Tantawi"
+          philosophyDescription="For many years, the entrepreneurial vision of businessman and corporate restructuring consultant Dr. Tarek El Tantawi has flourished, delivering transformative solutions and strategies for hundreds of projects across diverse sectors, regionally and globally.
+'"
+        />
         <Qualifications />
       </section>
       <section className="w-full py-12">
@@ -138,10 +148,34 @@ const tarektantawi = () => {
           sectionDescription="Strategic Consulting tailored for companies, business owners, and professionals — designed to boost efficiency, streamline operations, and guide your business to sustainable growth."
         />
         <LocationSection />
+
+        <ProgramsSection
+          sectionTitle="Dr. Tariq's Programs"
+          sectionDescription="The following training programs are offered under the supervision of lecturer, businessman, and corporate restructuring consultant Tarek El Tantawy:"
+          programs={[
+            {
+              image: Corporate,
+              title:
+                "Executive Preparation Program (For Businessmen & Businesswomen)",
+              // description:
+              //   "Executive Preparation Program (For Businessmen & Businesswomen)",
+              buttonText: "Explore More",
+            },
+            {
+              image: Coaching,
+              title: "Qa3det Business",
+              // description: "Qa3det Business",
+              buttonText: "Explore More",
+            },
+          ]}
+          ctaText="Start Your Consultation"
+          ctaLink="/consultation"
+        />
         <MainTitle
           title="Contact Us "
           description="We’re here to help your business grow."
         />
+
         <ContactUs
           phonesTel="+20 102 999 9210"
           phonesMob="+20 120 559 9333"
@@ -149,36 +183,6 @@ const tarektantawi = () => {
           address="72 Gannet Al Dowal Al Arbaa St, Mohandessin, Giza, Egypt"
         />
         <MapSection />
-        {/* <ProgramsSection
-          sectionTitle="Dr. Tariq's Programs"
-          sectionDescription="The Following Training Programs Are Offered Under The Supervision Of Lecturer, Businessman, And Corporate Restructuring Consultant Tarek El Tamtamy."
-          programs={[
-            {
-              image: Corporate,
-              title: "Administrative Preparation Program For The Labor Market",
-              description:
-                "Comprehensive training to prepare young professionals...",
-              buttonText: "Explore More",
-            },
-            {
-              image: Corporate,
-              title:
-                "Executive Preparation Program (For Businessmen & Businesswomen)",
-              description:
-                "Tailored for executives aiming to sharpen leadership skills...",
-              buttonText: "Explore More",
-            },
-            {
-              image: Corporate,
-              title: "Q3adet Business",
-              description:
-                "Professional business gatherings to connect and grow...",
-              buttonText: "Explore More",
-            },
-          ]}
-          ctaText="Start Your Consultation"
-          ctaLink="/consultation"
-        /> */}
       </section>
 
       <Footer />

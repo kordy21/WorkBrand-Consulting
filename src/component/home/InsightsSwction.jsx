@@ -6,7 +6,7 @@ import MainTitle from "../sharedComponents/MainTittle";
 import InsightsCard from "../home/InsightsCard";
 import { fadeInPlace, fadeInUp } from "../../utils/motionVariants";
 import { motion } from "framer-motion";
-
+import frame from '../../assets/images/frame.webp';
 export default function InsightsSection({
   any,
   data,
@@ -55,17 +55,18 @@ export default function InsightsSection({
         };
 
   return (
-    <section className="mt-12 max-container xl:px-0">
+    <section className="my-12 max-container xl:px-0">
       {/* Title */}
-      <MotionWrapper
+      {/* <MotionWrapper
         {...motionProps}
         variants={any === "no" ? undefined : fadeInPlace}
       >
         <MainTitle title={sectionTitle} description={sectionDescription} />
-      </MotionWrapper>
-
-      {/* 🖥️ Grid Desktop */}
-      <MotionWrapper
+      </MotionWrapper> */}
+      <div>
+        <img src={frame} alt="frame" className="w-full h-auto mt-6" />  
+      </div>
+      {/* <MotionWrapper
         className="hidden grid-cols-3 gap-8 px-4 py-6 lg:grid md:px-0"
         {...motionProps}
         variants={any === "no" ? undefined : fadeInUp}
@@ -81,7 +82,6 @@ export default function InsightsSection({
         ))}
       </MotionWrapper>
 
-      {/* 📱 Mobile Slider */}
       <MotionWrapper
         {...motionProps}
         variants={any === "no" ? undefined : fadeInUp}
@@ -100,7 +100,7 @@ export default function InsightsSection({
             ))}
           </Slider>
         </div>
-      </MotionWrapper>
+      </MotionWrapper> */}
     </section>
   );
 }

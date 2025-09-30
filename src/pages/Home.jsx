@@ -22,6 +22,8 @@ import instituion from "../assets/images/Institutional.webp";
 import finiacial from "../assets/images/finiacial.webp";
 import hr from "../assets/images/hr.webp";
 import marketing from "../assets/images/marketing.webp";
+import doctor from "../assets/images/drtantawy.webp"; 
+
 const insightsData = [
   {
     image: coparte,
@@ -109,7 +111,15 @@ const Home = () => {
         description="Years of experience in consulting and corporate management… drawing the path to success in your business."
       />
       <section className="max-container ">
-        <WhoWeAreSection />
+        <WhoWeAreSection
+          mobileTitle="About Dr. Tarek El Tantawi"
+          mobileDescription="For many years, the entrepreneurial vision of businessman and corporate restructuring consultant Tarek El Tantawi has flourished..."
+          imageSrc={doctor}
+          desktopTitle="Who We Are"
+          desktopDescription="We Are A Company That Encompasses All Possible Solutions For Everything Related To Business..."
+          philosophyTitle="Philosophy & Vision"
+          philosophyDescription="Dr. Tarek's philosophy goes beyond theory: 'Leadership isn’t just about vision; it’s about building structures that last...'"
+        />
         <OurImpactSection />
         <InsightsSection
           any="yes"

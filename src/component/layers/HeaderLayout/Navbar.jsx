@@ -588,7 +588,9 @@ const toggleDropdown = (item) => {
                 text={t("Home")}
                 IconStart={HomeIcon}
                 hover_white={true}
-                onClick={() => navigate("/contact-us")}
+                onClick={() =>
+                  (window.location.href = "https://new.workbrand.org/")
+                }
               />
             </div>
             {/* menu Mobile */}
