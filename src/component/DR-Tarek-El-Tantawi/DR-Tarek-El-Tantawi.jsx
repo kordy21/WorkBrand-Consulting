@@ -5,7 +5,7 @@ import InsightsSection from "../home/InsightsSwction";
 import Footer from "../sharedComponents/Footer";
 import HeroSection from "../sharedComponents/HeroSection";
 import Doctor from "../../assets/images/Doctor.webp";
-import tarek from "../../assets/images/tantawy.webp";
+import tarek from "../../assets/images/tannntawy.webp";
 import WhoWeAreSection from "../home/WhoWeAreSection";
 import ConsultingSection from "../home/ConsultingSection";
 import benfit from "../../assets/images/beneft.webp";
@@ -32,7 +32,7 @@ import ContactUs from "../sharedComponents/ContactUs";
 import MapSection from "../SingleService/MapSection";
 import ProgramsSection  from '../DR-Tarek-El-Tantawi/ProgramsSection';
 import doctor from "../../assets/images/drtantawy.webp"; 
-
+import GuidingPhilosophy from "../DR-Tarek-El-Tantawi/GuidingPhilosophy";
 const insightsData = [
   {
     image: Strategic,
@@ -137,7 +137,7 @@ const tarektantawi = () => {
         />
         <Qualifications />
       </section>
-      <section className="w-full py-12">
+      <section className="w-full pt-12">
         <AuthorThoughtLeader />
       </section>
       <section>
@@ -147,6 +147,9 @@ const tarektantawi = () => {
           sectionTitle="Areas of Expertise"
           sectionDescription="Strategic Consulting tailored for companies, business owners, and professionals — designed to boost efficiency, streamline operations, and guide your business to sustainable growth."
         />
+        <div>
+          <GuidingPhilosophy />
+        </div>
         <LocationSection />
 
         <ProgramsSection
@@ -155,10 +158,8 @@ const tarektantawi = () => {
           programs={[
             {
               image: Corporate,
-              title:
-                "Executive Preparation Program (For Businessmen & Businesswomen)",
-              // description:
-              //   "Executive Preparation Program (For Businessmen & Businesswomen)",
+              title: "Executive Preparation Program ",
+              description: "(For Businessmen & Businesswomen)",
               buttonText: "Explore More",
             },
             {

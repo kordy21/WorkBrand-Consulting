@@ -22,9 +22,11 @@ const MainTittle = ({ title, subdescription, description, align, color }) => {
 
       {description && (
         <p
-          className={`mt-2 text-gray-600 ${
-            align === "start" ? "text-start" : "text-center"
-          }`}
+          className={`text-base font-bold md:text-base pb-2 ${
+            color === "no"
+              ? "text-white"
+              : "bg-custom-blue bg-clip-text text-transparent"
+          } ${align === "start" ? "text-start" : "text-center"}`}
         >
           {description}
         </p>

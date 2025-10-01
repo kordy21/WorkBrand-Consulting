@@ -24,7 +24,10 @@ const qualifications = [
 export default function QualificationsGrid() {
   return (
     <>
+    <div className="pb-6">
+
       <MainTitle title="Academic Credentials & Affiliations" />
+    </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 p-5 md:p-0">
         {qualifications.map((q) => (
           <div

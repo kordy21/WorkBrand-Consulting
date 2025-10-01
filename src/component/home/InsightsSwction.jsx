@@ -63,9 +63,17 @@ export default function InsightsSection({
       >
         <MainTitle title={sectionTitle} description={sectionDescription} />
       </MotionWrapper> */}
-      <div>
-        <img src={frame} alt="frame" className="w-full h-auto mt-6" />  
+      <div
+        className="flex justify-center items-center p-5 md:p-0 w-[600px] h-[600px] bg-no-repeat bg-center bg-contain mx-auto hidden  lg:block"
+        style={{ backgroundImage: `url(${frame})` }}
+      >
       </div>
+      <div
+        className="flex justify-center items-center p-5 md:p-0 w-[400px] h-[400px] bg-no-repeat bg-center bg-contain mx-auto block  lg:hidden"
+        style={{ backgroundImage: `url(${frame})` }}
+      >
+      </div>
+
       {/* <MotionWrapper
         className="hidden grid-cols-3 gap-8 px-4 py-6 lg:grid md:px-0"
         {...motionProps}

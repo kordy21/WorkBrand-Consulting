@@ -28,11 +28,11 @@ const HeroSection = ({
 
       <div
         className={`relative z-10 flex flex-col items-center justify-center px-0 mb-4 text-white md:items-start ${
-          isSmallPage ? "pr-[150px] lg:pr-[750px]" : "lg:pr-56"
+          isSmallPage ? "pr-[150px]  lg:pr-[750px]" : "lg:pr-56"
         }`}
       >
         <h1
-          className={`mb-4 font-bold ${
+          className={`mt-4 md:mb-4 font-bold ${
             isSmallPage ? "text-2xl md:text-4xl" : "text-3xl md:text-7xl"
           }`}
         >
@@ -67,7 +67,7 @@ const HeroSection = ({
                 className="flex items-center space-x-2 text-custom-blue hover:text-white"
               >
                 <span>/</span>
-                <Link to={to} className="text-white hover:text-custom-blue">
+                <Link to={to} className="text-white hover:text-white">
                   {value.replace(/-/g, " ")}
                 </Link>
               </span>

@@ -11,7 +11,7 @@ const WhoWeAreSection = ({
   philosophyDescription,
 }) => {
   return (
-    <section className="max-container flex flex-col lg:flex-row items-center justify-center py-16 gap-5">
+    <section className="max-container flex flex-col lg:flex-row items-center justify-center py-12 gap-5">
       {/* Mobile Title & Description */}
       <div className="block md:hidden">
         <MainTittle
@@ -20,12 +20,12 @@ const WhoWeAreSection = ({
           align="start"
         />
       </div>
-      <p className="text-gray-700 mb-6 block md:hidden text-center">
+      <p className="text-gray-700 mb-0  md:mb-6 block md:hidden text-center">
         {mobileDescription}
       </p>
 
       {/* Image */}
-      <div className="w-full lg:w-1/2">
+      <div className="w-full lg:w-[60%]">
         <img
           src={imageSrc}
           alt="who we are"
@@ -34,7 +34,7 @@ const WhoWeAreSection = ({
       </div>
 
       {/* Desktop Content */}
-      <div className="w-full lg:w-1/2 flex flex-col justify-center">
+      <div className="w-full lg:w-[40%] flex flex-col justify-center">
         <div className="hidden md:block">
           <MainTittle
             title={desktopTitle}
@@ -45,7 +45,7 @@ const WhoWeAreSection = ({
 
 
         <div className="bg-custom-gradient-bg rounded-lg shadow-white shadow-lg">
-          <p className="text-gray-700 text-center md:text-start">
+          <p className="text-gray-700 text-center md:text-start p-5 md:p-0">
             {philosophyDescription}
           </p>
         </div>
