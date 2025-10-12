@@ -146,6 +146,7 @@ const Home = () => {
           icons={data}
           showTitle={false}
         />
+
         <RightPlace />
       </section>
       <Footer />

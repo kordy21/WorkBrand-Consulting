@@ -3,7 +3,7 @@ import HeaderLayout from "../component/layers/HeaderLayout/HeaderLayout";
 import HeroSection from "../component/sharedComponents/HeroSection";
 import Training from '../assets/images/training.webp';
 import Trainig1 from '../assets/images/training1.webp';
-import AboutProgram from "../component/sharedComponents/trainig program/AboutProgram";
+import AboutProgram from "../component/trainig program/AboutProgram";
 import training1 from '../assets/images/trainig1.webp';
 import training2 from '../assets/images/training2.webp';
 import training3 from '../assets/images/trainiong3.webp';
@@ -26,8 +26,15 @@ import icon5 from '../assets/Icons/target.svg';
 import icon6 from '../assets/Icons/target1.svg';
 import icon7 from '../assets/Icons/madrasra.svg';
 import icon8 from '../assets/Icons/kames.svg';
-
+import data from '../assets/images/dattta.webp';
+import ai from '../assets/images/ai.jpg';
+import  merketing from '../assets/images/marketing.webp';
+import qada3et from '../assets/images/Qa3det.webp';
+import ProgramCardGrid from "../component/trainig program/ProgramCardGrid";
 import { fa7 } from "@fortawesome/free-solid-svg-icons";
+import AIPowerSection from "../component/trainig program/AIPowerSection";
+import TripleArrowIcon from "../component/sharedComponents/TripleArrowIcon";
+import Footer from "../component/sharedComponents/Footer";
 
 export default function TrainingProgram() {
     const qualificationsData = [
@@ -96,13 +103,120 @@ export default function TrainingProgram() {
       },
       {
         image: icon7,
-        tittle1: "Secure",
+        // tittle1: "Secure",
         description: "Understand business success, failure, and risk avoidance",
       },
       {
         image: icon6,
-        tittle1: "24/7 Support",
+        // tittle1: "24/7 Support",
         description: "Gain hands-on training in market and project management",
+      },
+    ];
+    const student = [
+      {
+        image: icon9,
+        tittle1: "Theoretical Lectures",
+        description:
+          "We provide modern academic lectures designed to simplify concepts and build a solid knowledge foundation for participants..",
+      },
+      {
+        image: icon2,
+        tittle1: "Practical Applications",
+        description:
+          "Hands-on exercises that simulate real workplace scenarios to ensure you can apply what you learn immediately.",
+      },
+      {
+        image: icon3,
+        tittle1: "Real Business Case Studies",
+        description:
+          "Analysis of actual business cases to understand market challenges and explore effective solutions.",
+      },
+      {
+        image: icon4,
+        tittle1: "Team-Based Group Training",
+        description:
+          "Collaborative sessions that enhance communication, teamwork, and problem‑solving skills in a professional environment.",
+      },
+      {
+        image: icon8,
+        tittle1: "Secure",
+        description:
+          "Prepare participants for executive and managerial positions",
+      },
+      {
+        image: icon1,
+        tittle1: "Skill-Refining Exercises",
+        description:
+          "Special activities focused on strengthening specific skills and bridging the gap between theory and practice.",
+      },
+      {
+        image: icon7,
+        tittle1: "Regular Assessments & Tracking",
+        description:
+          "Continuous evaluation to monitor your progress and provide feedback for ongoing personal and professional improvement.",
+      },
+      {
+        image: icon6,
+        tittle1: "Regular Assessments & Tracking",
+        description:
+          "Continuous evaluation to monitor your progress and provide feedback for ongoing personal and professional improvement.",
+      },
+    ];
+    const programsData = [
+      {
+        image: qada3et,
+        title: "Qa3det Business",
+        points: [
+          "Discuss The Latest Business Trends",
+          "Learn From Real Success Stories",
+          "Build Strong Business Networks",
+          "Exchange Creative Ideas",
+        ],
+        link: "/programs/qa3det-business",
+      },
+      {
+        image: merketing,
+        title: "Marketing & Digital Marketing",
+        points: [
+          "Understand Marketing Mindset",
+          "Learn Social Media & Digital Strategies",
+          "Optimize Ads & Marketing Campaigns",
+          "Build A Strong Brand Identity",
+        ],
+        link: "/programs/marketing-digital",
+      },
+      {
+        image: merketing,
+        title: "HR & Business Growth",
+        points: [
+          "Create Professional Job Descriptions",
+          "Implement Performance Management Systems",
+          "Build A Healthy And Scalable Work Culture",
+          "Align HR With Business Strategy",
+        ],
+        link: "/programs/hr-business-growth",
+      },
+      {
+        image: data,
+        title: "Data Analysis Program",
+        points: [
+          "Learn To Read, Clean, And Analyze Data Effectively",
+          "Turn Numbers Into Smart Reports And Decisions",
+          "Hands-On Training With AI-Powered Tools And Techniques",
+          "100% Practical With Real Business Case Applications",
+        ],
+        link: "/programs/data-analysis",
+      },
+      {
+        image: ai,
+        title: "AI",
+        points: [
+          "Enhance Managerial And Communication Skills",
+          "Gain A Competitive Edge In The Job Market",
+          "Learn Key AI Tools For Productivity And Decision-Making",
+          "Stay Innovative And Adapt To Modern Workplace Trends",
+        ],
+        link: "/programs/ai",
       },
     ];
   return (
@@ -153,7 +267,12 @@ export default function TrainingProgram() {
           <MainTittle title="Main Program Objectives" />
         </div>
         <div>
-          <KeyFeature title="Features" icons={featuresData} showTitle={false} />
+          <KeyFeature
+            title="Features"
+            icons={featuresData}
+            showTitle={false}
+            transparent={true}
+          />
         </div>
       </section>
       {/* foruth */}
@@ -173,6 +292,39 @@ export default function TrainingProgram() {
           />
         </div>
       </section>
+      {/* fifth */}
+      <section className="bg-custom-black pb-5">
+        <div className="py-5">
+          <MainTittle title="Study Methodology" />
+        </div>
+        <div>
+          <KeyFeature
+            title="Features"
+            icons={student}
+            showTitle={false}
+            transparent={true}
+            align="center"
+          />
+        </div>
+      </section>
+      {/*sex  */}
+      <section>
+        <div className="pt-5">
+          <MainTittle
+            title="Our Program"
+            description="Years of experience… delivered through our professional training services"
+          />
+        </div>
+        <div>
+          <ProgramCardGrid programs={programsData} />
+        </div>
+      </section>
+      <section className="bg-custom-black">
+        <div className="max-container">
+          <AIPowerSection />
+        </div>
+      </section>
+      <Footer/>
     </main>
   );
 }

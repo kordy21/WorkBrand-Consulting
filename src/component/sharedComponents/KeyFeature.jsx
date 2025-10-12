@@ -5,6 +5,7 @@ const KeyFeature = ({
   icons = [],
   align = "start",
   showTitle = true,
+  transparent = false, 
 }) => {
   const justifyClass = align === "center" ? "justify-center" : "justify-start";
   const itemsClass = align === "center" ? "items-center" : "items-start";
@@ -22,7 +23,12 @@ const KeyFeature = ({
         {icons.map((item, index) => (
           <div
             key={index}
-            className={`group relative flex flex-col ${justifyClass} ${itemsClass} ${textClass} p-4 rounded-xl shadow-md transition-all duration-300 min-h-[128px] bg-transparent text-white border border-gray-300 hover:bg-white hover:text-black`}
+            className={`group relative flex flex-col ${justifyClass} ${itemsClass} ${textClass} p-4 rounded-xl shadow-md transition-all duration-300 min-h-[128px] 
+              ${
+                transparent
+                  ? "bg-transparent text-white border border-gray-300 hover:bg-white hover:text-black"
+                  : "bg-white text-black border border-gray-300"
+              }`}
           >
             <img
               src={item.image}
@@ -32,7 +38,7 @@ const KeyFeature = ({
             <h1 className="text-xl font-semibold transition-colors duration-300 w-[90%]">
               {item.tittle1}
             </h1>
-            <p className="text-base transition-colors duration-300 w-[90%]">
+            <p className="text-sm transition-colors duration-300 w-[90%]">
               {item.description}
             </p>
           </div>
