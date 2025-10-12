@@ -1,12 +1,15 @@
-import React from "react";
+import {React,useState} from "react";
 import CustomMainButton from "../sharedComponents/CustomMainButton";
 import TripleArrowIcon from "../sharedComponents/TripleArrowIcon";
 import doctor from "../../assets/images/navigate.webp";
 import CNB from "../../assets/images/cnb.webp";
 import alahram from "../../assets/images/alahram.webp";
 import alkaharah from "../../assets/images/alkaharah.webp";
+import UnderLineForm from "../sharedComponents/UnderLineForm";
 
 const AuthorThoughtLeader = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
   return (
     <section className="bg-custom-gradient-black text-white py-12">
       <div className="max-container grid grid-cols-1 md:grid-cols-2 items-center gap-10">
@@ -68,7 +71,29 @@ const AuthorThoughtLeader = () => {
               TripleArrow={
                 <TripleArrowIcon color="text-white" hoverColor="black" />
               }
+              onClick={() => setIsPopupOpen(true)} 
             />
+
+            {isPopupOpen && (
+              <div
+                className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
+                onClick={() => setIsPopupOpen(false)}
+              >
+                <div
+                  className="bg-white rounded-2xl p-6 w-[500px] shadow-lg relative"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <button
+                    onClick={() => setIsPopupOpen(false)}
+                    className="absolute top-2 right-3 text-gray-600 hover:text-black text-2xl"
+                  >
+                    ✖
+                  </button>
+
+                  <UnderLineForm />
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

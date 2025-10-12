@@ -1,8 +1,9 @@
-import React from "react";
+import {React,useState} from "react";
 import MainTittle from "../sharedComponents/MainTittle";
 import CustomMainButton from "../sharedComponents/CustomMainButton";
 import TripleArrowIcon from '../sharedComponents/TripleArrowIcon';
 import bg from '../../assets/images/bg-square.png';
+import UnderLineForm from "../sharedComponents/UnderLineForm";
 const ProgramsSection = ({
   sectionTitle,
   sectionDescription,
@@ -10,6 +11,8 @@ const ProgramsSection = ({
   ctaText,
   ctaLink,
 }) => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
   return (
     <section className=" bg-custom-gradient-black px-4 my-12 ">
       <div className="bg-custom-gradient-black  py-12 max-container">
@@ -57,8 +60,29 @@ const ProgramsSection = ({
                           hoverColor="black"
                         />
                       }
+                      onClick={() => setIsPopupOpen(true)}
                     />
                   </a>
+                  {isPopupOpen && (
+                    <div
+                      className="fixed inset-0 z-[9999] flex items-center justify-center bg-black bg-opacity-50"
+                      onClick={() => setIsPopupOpen(false)}
+                    >
+                      <div
+                        className="bg-white rounded-2xl p-6 w-[500px] shadow-lg relative"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <button
+                          onClick={() => setIsPopupOpen(false)}
+                          className="absolute top-2 right-3 text-gray-600 hover:text-black text-2xl"
+                        >
+                          ✖
+                        </button>
+
+                       <UnderLineForm/>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import logo from "../../assets/images/logoworkbrandblue.webp";
-import { ChevronRightIcon } from "@heroicons/react/24/outline";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ChevronUpIcon, PhoneIcon } from "@heroicons/react/24/outline";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
   faTwitter,
@@ -12,48 +11,54 @@ import {
   faYoutube,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
-
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import arrow from "../../assets/Icons/arrowfooter.svg";
 
 export default function Footer() {
+  const baseUrl = process.env.REACT_APP_BASE_URL;
   const [showScroll, setShowScroll] = useState(false);
   const [showWhatsOptions, setShowWhatsOptions] = useState(false);
+  const chatRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY === 0) {
-        setShowScroll(false);
-      } else {
-        setShowScroll(true);
-      }
+      setShowScroll(window.scrollY > 0);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (chatRef.current && !chatRef.current.contains(event.target)) {
+        setShowWhatsOptions(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   const services = {
-    "Services ": "/services",
-    "Offices ": "/offices",
+    "Services ":`${baseUrl}/services`,
+    "Offices ": `${baseUrl}/offices`,
     "Consulting ": "/coming-soon",
     "Create Website": "/coming-soon",
     "Media Agency": "/coming-soon",
   };
 
   const importantLinks = {
-    "Store ": "/store",
-    "Insights ": "/insights",
-    "About Us": "/about-us",
-    "Contact us": "/contact-us",
+    "Store ": `${baseUrl}/store`,
+    "Insights ":`${baseUrl}/insights`,
+    "About Us": `${baseUrl}/about-us`,
+    "Contact us": `${baseUrl}/contact-us`,
   };
 
   const Link = {
-    "FAQS ": "/faq",
-    "Terms and Conditions": "/terms-condition",
-    "Privacy Policy": "/privacy-police",
-    "Refund Policy": "/refund-police",
-    "Shipping Policy": "/shipping-police",
+    "FAQS ": `${baseUrl}/faq`,
+    "Terms and Conditions": `${baseUrl}/terms-condition`,
+    "Privacy Policy": `${baseUrl}/privacy-police`,
+    "Refund Policy": `${baseUrl}/refund-police`,
+    "Shipping Policy": `${baseUrl}/shipping-police`,
   };
 
   const scrollToTop = () => {
@@ -66,10 +71,7 @@ export default function Footer() {
   return (
     <footer
       className="relative pb-8 text-white lg:pt-20 md:bg-cover md:bg-no-repeat footer"
-      style={{
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      }}
+      style={{ backgroundSize: "cover", backgroundRepeat: "no-repeat" }}
     >
       <div className="flex flex-col justify-between gap-8 px-4 py-10 max-container md:flex-row">
         <div className="md:w-1/3">
@@ -78,7 +80,6 @@ export default function Footer() {
               <img src={logo} alt="WorkBrand" className="w-32 mb-4 md:w-32" />
             </a>
           </div>
-
           <p className="text-sm leading-6 text-[#FEF2D4]">
             We empower entrepreneurs to launch and grow with ease offering smart
             offices and digital tools designed for real success.
@@ -133,24 +134,13 @@ export default function Footer() {
         </div>
       </div>
 
+      {/* Social Icons */}
       <div className="flex items-center w-full">
         <div className="flex-grow h-[2px] bg-custom-blue"></div>
-
         {[
           {
-            icon: faTwitter,
-            link: "https://x.com/workbrandeg",
-            target: "_blank",
-          },
-          { icon: faFacebook, link: "https://www.facebook.com/workbrandeg/" },
-          {
             icon: faWhatsapp,
-            link: "https://wa.me/201234567890",
-            target: "_blank",
-          },
-          {
-            icon: faLinkedin,
-            link: "https://eg.linkedin.com/company/workbrandeg",
+            link: "https://wa.me/01029999210",
             target: "_blank",
           },
           {
@@ -158,15 +148,31 @@ export default function Footer() {
             link: "https://www.tiktok.com/@workbrandeg?_t=ZS-8zOGn4WKW1q&_r=1",
             target: "_blank",
           },
-          { icon: faEnvelope, link: "mailto:info@workbrandeg.com" },
-          {
-            icon: faYoutube,
-            link: "https://www.youtube.com/@workbrandeg",
-            target: "_blank",
-          },
           {
             icon: faInstagram,
             link: "https://www.instagram.com/workbrandeg/",
+            target: "_blank",
+          },
+          { 
+            icon: faFacebook, 
+            link: "https://www.facebook.com/workbrandeg/", 
+            target: "_blank" 
+          },
+          {
+            icon: faLinkedin,
+            link: "https://eg.linkedin.com/company/workbrandeg",
+            target: "_blank",
+          },
+          {
+            icon: faTwitter,
+            link: "https://x.com/workbrandeg",
+            target: "_blank",
+          },
+         
+          { icon: faEnvelope, link: "mailto:info@workbrandeg.com" },
+          {
+            icon: faYoutube,
+            link: "https://www.youtube.com/@workbrand1540",
             target: "_blank",
           },
         ].map((item, idx) => (
@@ -182,7 +188,6 @@ export default function Footer() {
             </a>
           </div>
         ))}
-
         <div className="flex-grow h-[2px] bg-custom-blue"></div>
       </div>
 
@@ -221,12 +226,11 @@ export default function Footer() {
         )}
       </div>
 
-      {/* WhatsApp Button + Options */}
-      {/* WhatsApp Button + Options */}
+      {/* WhatsApp + Phone */}
       <div
         className={`fixed z-30 bottom-4 md:bottom-7 flex flex-col gap-3 end-5`}
       >
-        <div className="relative">
+        <div className="relative" ref={chatRef}>
           <button
             onClick={() => setShowWhatsOptions(!showWhatsOptions)}
             className="flex items-center justify-center w-12 h-12 transition duration-300 bg-green-500 rounded-full shadow-lg hover:bg-green-600"
@@ -286,7 +290,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Phone Button */}
+        {/* Phone */}
         <a href="tel:01234567890">
           <button className="flex items-center justify-center w-12 h-12 transition duration-300 rounded-full shadow-lg bg-custom-gradient-black hover:bg-yellow-400">
             <PhoneIcon className="w-6 h-6 text-white" />

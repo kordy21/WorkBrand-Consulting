@@ -31,6 +31,8 @@ import ShoppingMenu from "./ShoppingMenu";
 import BellMenu from "./BellMenu";
 import MobileMenu from "./MobileMenu";
 
+const baseUrl = process.env.REACT_APP_BASE_URL;
+
 const menuDataDes = {
   Services: {
     dropdown: true,
@@ -42,7 +44,7 @@ const menuDataDes = {
     footerLinks: [
       { name: "Quick Links", link: "/coming-soon" },
       { name: "Join Today", link: "/coming-soon" },
-      { name: "Contact Us", link: "/contact-us" },
+      { name: "Contact Us", link: `${baseUrl}/contact-us` },
       // { name: "Download", link: "/coming-soon" },
     ],
     sections: [
@@ -50,10 +52,19 @@ const menuDataDes = {
         id: 1,
         headline1: "Workspaces",
         subItems: [
-          { name: "Private Offices", link: "/services/private-office" },
-          { name: "Virtual Office", link: "/services/virtual-office" },
-          { name: "Meeting Rooms", link: "/services/meeting-rooms" },
-          { name: "Training Rooms", link: "/services/training-rooms" },
+          {
+            name: "Private Offices",
+            link: `${baseUrl}/services/private-office`,
+          },
+          {
+            name: "Virtual Office",
+            link: `${baseUrl}/services/virtual-office`,
+          },
+          { name: "Meeting Rooms", link: `${baseUrl}/services/meeting-rooms` },
+          {
+            name: "Training Rooms",
+            link: `${baseUrl}/services/training-rooms`,
+          },
         ],
       },
       {
@@ -77,7 +88,7 @@ const menuDataDes = {
     footerLinks: [
       { name: "Quick Links", link: "/coming-soon" },
       { name: "Join Today", link: "/coming-soon" },
-      { name: "Contact Us", link: "/contact-us" },
+      { name: "Contact Us", link: `${baseUrl}/contact-us` },
       // { name: "Download", link: "/coming-soon" },
     ],
     sections: [
@@ -85,8 +96,8 @@ const menuDataDes = {
         id: 1,
         headline1: "Offices",
         subItems: [
-          { name: "Mohandeseen Branch", link: "/mohandessin-branch" },
-          { name: "Nasr City Branch", link: "/nasr-city-branch" },
+          { name: "Mohandeseen Branch", link: `${baseUrl}/mohandessin-branch` },
+          { name: "Nasr City Branch", link: `${baseUrl}/nasr-city-branch` },
         ],
       },
     ],
@@ -101,7 +112,7 @@ const menuDataDes = {
     footerLinks: [
       { name: "Quick Links", link: "/coming-soon" },
       { name: "Join Today", link: "/coming-soon" },
-      { name: "Contact Us", link: "/contact-us" },
+      { name: "Contact Us", link: `${baseUrl}/contact-us` },
       // { name: "Download", link: "/coming-soon" },
     ],
     sections: [
@@ -138,7 +149,7 @@ const menuDataDes = {
     footerLinks: [
       { name: "Quick Links", link: "/coming-soon" },
       { name: "Join Today", link: "/coming-soon" },
-      { name: "Contact Us", link: "/contact-us" },
+      { name: "Contact Us", link: `${baseUrl}contact-us` },
       // { name: "Download", link: "/coming-soon" },
     ],
     sections: [
@@ -195,18 +206,18 @@ const menuDataDes = {
         id: 1,
         headline1: "Featured Products",
         subItems: [
-          { name: "WorkBrand Branded Items", link: "/store" },
-          { name: "Monthly Deals", link: "/store" },
-          { name: "Equipment for Rent", link: "/store" },
+          { name: "WorkBrand Branded Items", link: `${baseUrl}/store` },
+          { name: "Monthly Deals", link: `${baseUrl}/store` },
+          { name: "Equipment for Rent", link: `${baseUrl}/store` },
         ],
       },
       {
         id: 2,
         headline1: "Services & Support",
         subItems: [
-          { name: "Custom Orders", link: "/store" },
-          { name: "Shipping & Returns", link: "/store" },
-          { name: "Help Center", link: "/store" },
+          { name: "Custom Orders", link: `${baseUrl}/store` },
+          { name: "Shipping & Returns", link: `${baseUrl}/store` },
+          { name: "Help Center", link: `${baseUrl}/store` },
         ],
       },
     ],
@@ -220,7 +231,7 @@ const menuDataDes = {
     footerLinks: [
       { name: "Quick Links", link: "/coming-soon" },
       { name: "Join Today", link: "/coming-soon" },
-      { name: "Contact Us", link: "/contact-us" },
+      { name: "Contact Us", link: `${baseUrl}contact-us ` },
       // { name: "Download", link: "/coming-soon" },
     ],
     sections: [
@@ -228,17 +239,17 @@ const menuDataDes = {
         id: 1,
         headline1: "Insights",
         subItems: [
-          { name: "Articles", link: "/insights" },
-          { name: "Tips & Guides", link: "/insights" },
-          { name: "News & Updates", link: "/insights" },
+          { name: "Articles", link: `${baseUrl}insights` },
+          { name: "Tips & Guides", link: `${baseUrl}insights` },
+          { name: "News & Updates", link: `${baseUrl}insights` },
         ],
       },
       {
         id: 2,
         headline1: "Event",
         subItems: [
-          { name: "Upcoming Events", link: "/coming-soon" },
-          { name: "Past Events", link: "/coming-soon" },
+          { name: "Upcoming Events", link: `${baseUrl}/eventsingle` },
+          { name: "Past Events", link: `${baseUrl}/event` },
           { name: "Book an Event", link: "/coming-soon" },
         ],
       },
@@ -255,10 +266,19 @@ const menuDataMob = {
         id: 1,
         headline1: "Workspaces",
         subItems: [
-          { name: "Private Offices", link: "/services/private-office" },
-          { name: "Virtual Office", link: "/services/virtual-office" },
-          { name: "Meeting Rooms", link: "/services/meeting-rooms" },
-          { name: "Training Rooms", link: "/services/training-rooms" },
+          {
+            name: "Private Offices",
+            link: `${baseUrl}/services/private-office`,
+          },
+          {
+            name: "Virtual Office",
+            link: `${baseUrl}/services/virtual-office`,
+          },
+          { name: "Meeting Rooms", link: `${baseUrl}/services/meeting-rooms` },
+          {
+            name: "Training Rooms",
+            link: `${baseUrl}/services/training-rooms`,
+          },
           { name: "Training halls", link: "/coming-soon" },
           { name: "Production Studio", link: "/coming-soon" },
           { name: "Organizing events", link: "/coming-soon" },
@@ -274,8 +294,8 @@ const menuDataMob = {
         id: 1,
         headline1: "Offices",
         subItems: [
-          { name: "Mohandeseen Branch", link: "/mohandessin-branch" },
-          { name: "Nasr City Branch", link: "/nasr-city-branch" },
+          { name: "Mohandeseen Branch", link: `${baseUrl}/mohandessin-branch` },
+          { name: "Nasr City Branch", link: `${baseUrl}/nasr-city-branch` },
         ],
       },
     ],
@@ -346,18 +366,18 @@ const menuDataMob = {
         id: 1,
         headline1: "Featured Products",
         subItems: [
-          { name: "WorkBrand Branded Items", link: "/store" },
-          { name: "Monthly Deals", link: "/store" },
-          { name: "Equipment for Rent", link: "/store" },
+          { name: "WorkBrand Branded Items", link: `${baseUrl}/store` },
+          { name: "Monthly Deals", link: `${baseUrl}/store` },
+          { name: "Equipment for Rent", link: `${baseUrl}/store` },
         ],
       },
       {
         id: 2,
         headline1: "Services & Support",
         subItems: [
-          { name: "Custom Orders", link: "/store" },
-          { name: "Shipping & Returns", link: "/store" },
-          { name: "Help Center", link: "/store" },
+          { name: "Custom Orders", link: `${baseUrl}/store` },
+          { name: "Shipping & Returns", link: `${baseUrl}/store` },
+          { name: "Help Center", link: `${baseUrl}/store` },
         ],
       },
     ],
@@ -379,8 +399,8 @@ const menuDataMob = {
         id: 2,
         headline1: "Event",
         subItems: [
-          { name: "Upcoming Events", link: "/coming-soon" },
-          { name: "Past Events", link: "/coming-soon" },
+          { name: "Upcoming Events", link: `${baseUrl}/eventsingle` },
+          { name: "Past Events", link: `${baseUrl}/event` },
           { name: "Book an Event", link: "/coming-soon" },
         ],
       },
@@ -394,10 +414,10 @@ const menuDataMob = {
         id: 1,
         headline1: "Pages",
         subItems: [
-          { name: "About", link: "/about-us" },
-          { name: "Career", link: "/career" },
-          { name: "Location", link: "/location" },
-          { name: "Content", link: "/contact-us" },
+          { name: "About", link: `${baseUrl}/about-us` },
+          { name: "Career", link: `${baseUrl}/career` },
+          { name: "Location", link: `${baseUrl}/location` },
+          { name: "Content", link: `${baseUrl}/contact-us` },
         ],
       },
     ],

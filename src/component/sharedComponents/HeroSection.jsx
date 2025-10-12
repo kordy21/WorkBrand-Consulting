@@ -1,23 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
 import CustomMainButton from "./CustomMainButton";
 import TripleArrowIcon from "./TripleArrowIcon";
-import { ReactComponent as WriteIcon } from "../../assets/Icons/write.svg";
 import { Link, useLocation } from "react-router-dom";
-const HeroSection = ({
-  backgroundImage,
-  title,
-  description,
-  buttonText,
-  buttonIcon,
-  onClick,
-}) => {
+import UnderLineForm from "./UnderLineForm";
+
+const HeroSection = ({ backgroundImage, title, description, buttonText }) => {
   const location = useLocation();
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
   const pathnames = location.pathname.split("/").filter((x) => x);
-  const isSmallPage = location.pathname.includes("store-details"); 
+  const isSmallPage = location.pathname.includes("store-details");
+
+  const popupContent = (
+    <div
+      className="fixed inset-0 z-[9999] flex items-center justify-center bg-black bg-opacity-50"
+      onClick={() => setIsPopupOpen(false)}
+    >
+      <div
+        className="bg-white rounded-2xl p-6 w-[500px] shadow-lg relative"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button
+          onClick={() => setIsPopupOpen(false)}
+          className="absolute top-2 right-3 text-gray-600 hover:text-black text-2xl"
+        >
+          ✖
+        </button>
+
+        <UnderLineForm />
+      </div>
+    </div>
+  );
+
   return (
     <section
       className={`relative w-full flex items-center justify-center pt-[100px] lg:pt-0 
-    ${isSmallPage ? "h-[300px]" : "h-[400px] md:h-[500px]"}`}
+        ${isSmallPage ? "h-[300px]" : "h-[400px] md:h-[500px]"}`}
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
@@ -28,7 +46,7 @@ const HeroSection = ({
 
       <div
         className={`relative z-10 flex flex-col items-center justify-center px-0 mb-4 text-white md:items-start ${
-          isSmallPage ? "pr-[150px]  lg:pr-[750px]" : "lg:pr-56"
+          isSmallPage ? "pr-[150px] lg:pr-[750px]" : "lg:pr-56"
         }`}
       >
         <h1
@@ -38,6 +56,7 @@ const HeroSection = ({
         >
           {title}
         </h1>
+
         <p
           className={`flex max-w-3xl p-5 mx-auto text-center md:text-start md:p-0 ${
             isSmallPage ? "text-base md:text-lg" : "text-lg md:text-lg"
@@ -52,7 +71,7 @@ const HeroSection = ({
               text={buttonText}
               fullWidth
               TripleArrow={<TripleArrowIcon />}
-              onClick={onClick}
+              onClick={() => setIsPopupOpen(true)}
             />
           </div>
         )}
@@ -75,6 +94,12 @@ const HeroSection = ({
           })}
         </nav>
       </div>
+
+      {isPopupOpen &&
+        ReactDOM.createPortal(
+          popupContent,
+          document.getElementById("popup-root")
+        )}
     </section>
   );
 };

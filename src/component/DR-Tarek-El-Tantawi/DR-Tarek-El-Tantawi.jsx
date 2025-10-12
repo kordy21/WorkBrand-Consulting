@@ -33,6 +33,9 @@ import MapSection from "../SingleService/MapSection";
 import ProgramsSection  from '../DR-Tarek-El-Tantawi/ProgramsSection';
 import doctor from "../../assets/images/drtantawy.webp"; 
 import GuidingPhilosophy from "../DR-Tarek-El-Tantawi/GuidingPhilosophy";
+import phd from "../../assets/images/PhD.webp";
+import MBA from "../../assets/images/MBA.webp";
+import Masters from "../../assets/images/Master’s.webp";
 const insightsData = [
   {
     image: Strategic,
@@ -116,6 +119,18 @@ const data = [
       "Growing businesses that need operational, financial, and marketing guidance to thrive in competitive markets.",
   },
 ];
+const qualificationsData = [
+  { img: phd, title: "PhD In Strategic Planning & Business Excellence (USA)" },
+  { img: MBA, title: "MBA In Marketing, HRM, And Strategic Management" },
+  { img: Masters, title: "Master’s In Human Resource Management (AUD)" },
+  { img: phd, title: "PhD In Strategic Planning & Business Excellence (USA)" },
+  { img: MBA, title: "MBA In Marketing, HRM, And Strategic Management" },
+  { img: Masters, title: "Master’s In Human Resource Management (AUD)" },
+  { img: phd, title: "PhD In Strategic Planning & Business Excellence (USA)" },
+  { img: MBA, title: "MBA In Marketing, HRM, And Strategic Management" },
+  { img: Masters, title: "Master’s In Human Resource Management (AUD)" },
+];
+
 const tarektantawi = () => {
   return (
     <main className="relative w-full bg-custom-gradient-bg">
@@ -135,7 +150,8 @@ const tarektantawi = () => {
           philosophyDescription="For many years, the entrepreneurial vision of businessman and corporate restructuring consultant Dr. Tarek El Tantawi has flourished, delivering transformative solutions and strategies for hundreds of projects across diverse sectors, regionally and globally.
 '"
         />
-        <Qualifications />
+
+        <Qualifications qualifications={qualificationsData} />
       </section>
       <section className="w-full pt-12">
         <AuthorThoughtLeader />
@@ -164,13 +180,13 @@ const tarektantawi = () => {
             },
             {
               image: Coaching,
-              title: "Qa3det Business",
+              title: "Qaadet Business",
               // description: "Qa3det Business",
               buttonText: "Explore More",
             },
           ]}
           ctaText="Start Your Consultation"
-          ctaLink="/consultation"
+          // ctaLink="/consultation"
         />
         <MainTitle
           title="Contact Us "
