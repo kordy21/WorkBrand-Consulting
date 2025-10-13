@@ -118,7 +118,7 @@ const Home = () => {
           desktopTitle="Who We Are"
           desktopDescription="We Are A Company That Encompasses All Possible Solutions For Everything Related To Business..."
           philosophyTitle="Philosophy & Vision"
-          philosophyDescription="Dr. Tarek's philosophy goes beyond theory: 'Leadership isn’t just about vision; it’s about building structures that last...'"
+          philosophyDescription="Dr. Tarek’s philosophy goes far beyond theory. Leadership isn’t just about having a vision or inspiring others—it’s about creating strong, lasting structures, empowering people, and building systems that endure through challenges and time."
         />
         <OurImpactSection />
         <InsightsSection

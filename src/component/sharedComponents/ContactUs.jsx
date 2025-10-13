@@ -14,6 +14,7 @@ import {
   faLinkedin,
   faTwitter,
   faYoutube,
+  faSnapchat,
 } from "@fortawesome/free-brands-svg-icons";
 
 import UnderLineForm from "../sharedComponents/UnderLineForm";
@@ -66,22 +67,12 @@ const ContactUs = ({ phonesTel, phonesMob, email, address }) => {
           {/* Social Media */}
           <div className="flex items-start justify-start w-full gap-4 text-2xl max-container">
             <a
-              href="https://wa.me/01029999210"
+              href="https://www.facebook.com/workbrandeg/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FontAwesomeIcon
-                icon={faWhatsapp}
-                className="text-white transition duration-300 hover:scale-105 hover:text-custom-blue"
-              />
-            </a>
-            <a
-              href="https://www.tiktok.com/@workbrandeg?_t=ZS-8zOGn4WKW1q&_r=1"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon
-                icon={faTiktok}
+                icon={faFacebook}
                 className="text-white transition duration-300 hover:scale-105  hover:text-custom-blue"
               />
             </a>
@@ -95,16 +86,7 @@ const ContactUs = ({ phonesTel, phonesMob, email, address }) => {
                 className="text-white transition duration-300 hover:scale-105  hover:text-custom-blue"
               />
             </a>
-            <a
-              href="https://www.facebook.com/workbrandeg/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon
-                icon={faFacebook}
-                className="text-white transition duration-300 hover:scale-105  hover:text-custom-blue"
-              />
-            </a>
+
             <a
               href="https://eg.linkedin.com/company/workbrandeg"
               target="_blank"
@@ -116,23 +98,54 @@ const ContactUs = ({ phonesTel, phonesMob, email, address }) => {
               />
             </a>
             <a
-              href="https://x.com/workbrandeg"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon
-                icon={faTwitter}
-                className="text-white transition duration-300 hover:scale-105  hover:text-custom-blue"
-              />
-            </a>
-
-            <a
               href="https://www.youtube.com/@workbrand1540"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FontAwesomeIcon
                 icon={faYoutube}
+                className="text-white transition duration-300 hover:scale-105  hover:text-custom-blue"
+              />
+            </a>
+            {/* <a
+              href="https://wa.me/01029999210"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon
+                icon={faWhatsapp}
+                className="text-white transition duration-300 hover:scale-105 hover:text-custom-blue"
+              />
+            </a> */}
+            <a
+              href="https://www.tiktok.com/@workbrandeg?_t=ZS-8zOGn4WKW1q&_r=1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon
+                icon={faTiktok}
+                className="text-white transition duration-300 hover:scale-105  hover:text-custom-blue"
+              />
+            </a>
+
+            <a
+              href="https://snapchat.com/t/2oJ9hqAZ"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon
+                icon={faSnapchat}
+                className="text-white transition duration-300 hover:scale-105  hover:text-custom-blue"
+              />
+            </a>
+
+            <a
+              href="https://x.com/workbrandeg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon
+                icon={faTwitter}
                 className="text-white transition duration-300 hover:scale-105  hover:text-custom-blue"
               />
             </a>

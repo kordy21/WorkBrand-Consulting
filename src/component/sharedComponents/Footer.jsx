@@ -10,7 +10,9 @@ import {
   faTiktok,
   faYoutube,
   faInstagram,
+  faSnapchat, 
 } from "@fortawesome/free-brands-svg-icons";
+
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import arrow from "../../assets/Icons/arrowfooter.svg";
 
@@ -139,13 +141,8 @@ export default function Footer() {
         <div className="flex-grow h-[2px] bg-custom-blue"></div>
         {[
           {
-            icon: faWhatsapp,
-            link: "https://wa.me/01029999210",
-            target: "_blank",
-          },
-          {
-            icon: faTiktok,
-            link: "https://www.tiktok.com/@workbrandeg?_t=ZS-8zOGn4WKW1q&_r=1",
+            icon: faFacebook,
+            link: "https://www.facebook.com/workbrandeg/",
             target: "_blank",
           },
           {
@@ -153,28 +150,39 @@ export default function Footer() {
             link: "https://www.instagram.com/workbrandeg/",
             target: "_blank",
           },
-          { 
-            icon: faFacebook, 
-            link: "https://www.facebook.com/workbrandeg/", 
-            target: "_blank" 
-          },
           {
             icon: faLinkedin,
             link: "https://eg.linkedin.com/company/workbrandeg",
             target: "_blank",
           },
           {
-            icon: faTwitter,
-            link: "https://x.com/workbrandeg",
-            target: "_blank",
-          },
-         
-          { icon: faEnvelope, link: "mailto:info@workbrandeg.com" },
-          {
             icon: faYoutube,
             link: "https://www.youtube.com/@workbrand1540",
             target: "_blank",
           },
+          // {
+          //   icon: faWhatsapp,
+          //   link: "https://wa.me/01029999210",
+          //   target: "_blank",
+          // },
+          {
+            icon: faTiktok,
+            link: "https://www.tiktok.com/@workbrandeg?_t=ZS-8zOGn4WKW1q&_r=1",
+            target: "_blank",
+          },
+          {
+            icon: faSnapchat,
+            link: "https://snapchat.com/t/2oJ9hqAZ",
+            target: "_blank",
+          },
+
+          {
+            icon: faTwitter,
+            link: "https://x.com/workbrandeg",
+            target: "_blank",
+          },
+
+          { icon: faEnvelope, link: "mailto:info@workbrandeg.com" },
         ].map((item, idx) => (
           <div
             key={idx}
