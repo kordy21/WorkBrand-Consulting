@@ -118,7 +118,7 @@ const Home = () => {
           desktopTitle="Who We Are"
           desktopDescription="We Are A Company That Encompasses All Possible Solutions For Everything Related To Business..."
           philosophyTitle="Philosophy & Vision"
-          philosophyDescription="Dr. Tarek’s philosophy goes far beyond theory. Leadership isn’t just about having a vision or inspiring others—it’s about creating strong, lasting structures, empowering people, and building systems that endure through challenges and time."
+          philosophyDescription="For many years, the entrepreneurial vision of businessman and corporate restructuring consultant Dr. Tarek El Tantawi has flourished, delivering transformative solutions and strategies for hundreds of projects across diverse sectors, regionally and globally. His expertise spans financial restructuring, strategic planning, and operational excellence, enabling organizations to achieve sustainable growth and enhanced efficiency. Dr. El Tantawi’s innovative approach, combined with his deep understanding of market dynamics, has earned him recognition as a trusted advisor for businesses aiming to thrive in competitive environments. His commitment to excellence and transformative impact continues to inspire and shape the future of numerous enterprises worldwide."
         />
         <OurImpactSection />
         <InsightsSection

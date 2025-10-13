@@ -4,6 +4,7 @@ import Home from "./pages/Home.jsx";
 import Taerk from "./pages/TarekTantawi.jsx";
 import TrainingProgram from "./pages/TrainingProgram.jsx";
 import  Qaadat from './component/Qa3det/Qa3detBusiness.jsx';
+import Marketing from './pages/MarketingProgrampage.jsx';
 import "../src/style.css";
 const ResetScroll = ({ children }) => {
   const location = useLocation();
@@ -25,6 +26,7 @@ const App = () => {
           <Route path="/traning-program" element={<TrainingProgram />} />
           <Route path="/traning-program" element={<TrainingProgram />} />
           <Route path="/qaadet-bussiness" element={<Qaadat />} />
+          <Route path="/marketing" element={<Marketing />} />
         </Routes>
       </ResetScroll>
     </div>

@@ -182,7 +182,7 @@ export default function Footer() {
             target: "_blank",
           },
 
-          { icon: faEnvelope, link: "mailto:info@workbrandeg.com" },
+          // { icon: faEnvelope, link: "mailto:info@workbrandeg.com" },
         ].map((item, idx) => (
           <div
             key={idx}

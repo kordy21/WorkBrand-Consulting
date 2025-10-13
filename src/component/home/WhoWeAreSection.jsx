@@ -29,7 +29,7 @@ const WhoWeAreSection = ({
         <img
           src={imageSrc}
           alt="who we are"
-          className="w-full h-[465px] rounded-lg p-5 md:p-0"
+          className="w-full h-[465px] object-cover rounded-lg p-5 md:p-0"
         />
       </div>
 
@@ -44,7 +44,7 @@ const WhoWeAreSection = ({
         </div>
 
 
-        <div className="bg-custom-gradient-bg rounded-lg shadow-white shadow-lg">
+        <div className=" rounded-lg  ">
           <p className="text-gray-700 text-center md:text-start p-5 md:p-0">
             {philosophyDescription}
           </p>
