@@ -315,7 +315,7 @@ export default function TrainingProgram() {
             description="Years of experience… delivered through our professional training services"
           />
         </div>
-        <div>
+        <div className="max-container">
           <ProgramCardGrid programs={programsData} />
         </div>
       </section>

@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import Taerk from "./pages/TarekTantawi.jsx";
 import TrainingProgram from "./pages/TrainingProgram.jsx";
+import  Qaadat from './component/Qa3det/Qa3detBusiness.jsx';
 import "../src/style.css";
 const ResetScroll = ({ children }) => {
   const location = useLocation();
@@ -22,6 +23,8 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/dr-tarek-tantawi" element={<Taerk />} />
           <Route path="/traning-program" element={<TrainingProgram />} />
+          <Route path="/traning-program" element={<TrainingProgram />} />
+          <Route path="/qaadet-bussiness" element={<Qaadat />} />
         </Routes>
       </ResetScroll>
     </div>
