@@ -21,16 +21,15 @@ const CardLocation = ({
 
   return (
     <div
-      className={`relative w-full overflow-hidden rounded-lg ${
+      className={`relative w-full overflow-hidden rounded-lg border p-5 md:p-0 ${
         removeMB ? "" : "md:"
-      } border-button custom-radius`}
+      } border-gray-300 custom-radius`}
       style={{
         backgroundImage:
           whiteBackground || isMobile ? "none" : `url(${imageBG})`,
-        backgroundColor: whiteBackground || isMobile ? "white" : "transparent",
+        backgroundColor: whiteBackground ? "white" : "transparent",
         backgroundPosition: "bottom center",
         backgroundRepeat: "no-repeat",
-        filter: "drop-shadow(0px 0px 4px #d4d4d4)",
       }}
     >
       <div className="relative">
@@ -44,11 +43,11 @@ const CardLocation = ({
       </div>
 
       <div className="p-5">
-        <div className="flex gap-3 mb-4 duration-300 cursor-pointer hover:text-custom-blue">
+        <div className="flex gap-3 mb-4 duration-300 cursor-pointer text-white hover:text-custom-blue">
           <button className="bg-custom-primary w-[15px] h-[15px] rounded mt-2"></button>
           <h3 className="text-xl font-bold">{title}</h3>
         </div>
-        <ul className="mb-4 text-base text-black list-disc list-inside">
+        <ul className="mb-4 text-base text-white list-disc list-inside">
           {description.split(",").map((item, i) => (
             <li key={i}>{item.trim()}</li>
           ))}

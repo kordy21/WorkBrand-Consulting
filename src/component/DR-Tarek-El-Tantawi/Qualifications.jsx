@@ -12,7 +12,7 @@ export default function QualificationsGrid({
   };
 
   return (
-    <section className="py-8">
+    <section className=" pt-5 md:pt-8">
       {showTitle && (
         <div className="pb-6 text-center">
           <MainTitle title="Academic Credentials & Affiliations" />

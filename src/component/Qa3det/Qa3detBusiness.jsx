@@ -11,9 +11,15 @@ import growth1 from '../../assets/images/growth1.webp';
 import owner1 from '../../assets/images/owner1.webp';
 import strategy1 from '../../assets/images/strategy1.webp';
 import AboutProgram from "../trainig program/AboutProgram";
+import benefit1 from '../../assets/images/benefit1.webp';
+import benefit2 from '../../assets/images/benefit2.webp';
+import benefit3 from '../../assets/images/benefit3.webp';
+import benefit4 from '../../assets/images/benefit4.webp';
 import Footer from "../sharedComponents/Footer";
 import QualificationsGrid from "../DR-Tarek-El-Tantawi/Qualifications";
+import CardLocation from "../sharedComponents/CardLocation";
 import { Description } from "@headlessui/react";
+import InfoCards from "./InfoCards";
 export default function Qa3detBusiness() {
         const qualificationsData = [
           {
@@ -89,6 +95,11 @@ export default function Qa3detBusiness() {
               "Understand the key differences between a business owner and an entrepreneur, and the skills required for each.",
           },
         ];
+        const data = [
+          { text: "Over 26 Years Of Hands-On Business Consulting Experience." },
+          { text: "Holds A PhD In Strategic Management From The USA." },
+          { text: "Author Of 16+ Books On Management And Marketing." },
+        ];
     return (
       <>
         <HeaderLayout />
@@ -130,6 +141,61 @@ export default function Qa3detBusiness() {
                 qualifications={qualificationsData}
                 showTitle={false}
               />
+            </div>
+          </section>
+          {/* third */}
+          <section className=" bg-custom-black">
+            <div className="max-container">
+              <div className="py-5">
+                <MainTittle title="Key Benefits" />
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-6 ">
+                <CardLocation
+                  image={benefit1}
+                  title="Keynote Sessions"
+                  description="Open discussions with thought leaders and influencers about the future of technology, startup investment, and global trends"
+                  whiteBackground={false}
+                  removeMB={true}
+                  showButton={false}
+                  showLocationButton={false}
+                />
+                <CardLocation
+                  image={benefit2}
+                  title="Keynote Sessions"
+                  description="Open discussions with thought leaders and influencers about the future of technology, startup investment, and global trends"
+                  whiteBackground={false}
+                  removeMB={true}
+                  showButton={false}
+                  showLocationButton={false}
+                />
+                <CardLocation
+                  image={benefit3}
+                  title="Keynote Sessions"
+                  description="Open discussions with thought leaders and influencers about the future of technology, startup investment, and global trends"
+                  whiteBackground={false}
+                  removeMB={true}
+                  showButton={false}
+                  showLocationButton={false}
+                />
+                <CardLocation
+                  image={benefit4}
+                  title="Keynote Sessions"
+                  description="Open discussions with thought leaders and influencers about the future of technology, startup investment, and global trends"
+                  whiteBackground={false}
+                  removeMB={true}
+                  showButton={false}
+                  showLocationButton={false}
+                />
+              </div>
+            </div>
+          </section>
+          {/* fourth */}
+          <section className="bg-custom-yellow">
+            <div className="pt-5">
+              <MainTittle title="About Tarek El-Tantawi" />
+            </div>
+            <div>
+              <InfoCards items={data} />
             </div>
           </section>
         </main>
