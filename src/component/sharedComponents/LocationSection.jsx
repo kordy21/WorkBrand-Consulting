@@ -44,7 +44,7 @@ Career path evaluation and planning to shape future success"
               location="Giza, Egypt"
               buttonText="Explore Mohandessin Offices"
               link="/mohandessin-branch"
-              whiteBackground={true}
+              whiteBackground={false}
             />
           </div>
 
@@ -57,7 +57,7 @@ Financial and administrative consulting for performance enhancement Reserve your
               location="Cairo, Egypt"
               buttonText="Explore Nasr City Offices"
               link="/nasr-city-branch"
-              whiteBackground={true}
+              whiteBackground={false}
             />
           </div>
         </div>

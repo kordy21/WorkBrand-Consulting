@@ -43,11 +43,11 @@ const CardLocation = ({
       </div>
 
       <div className="p-5">
-        <div className="flex gap-3 mb-4 duration-300 cursor-pointer text-white hover:text-custom-blue">
+        <div className="flex gap-3 mb-4 duration-300 cursor-pointer text-custom-blue hover:text-custom-blue">
           <button className="bg-custom-primary w-[15px] h-[15px] rounded mt-2"></button>
           <h3 className="text-xl font-bold">{title}</h3>
         </div>
-        <ul className="mb-4 text-base text-white list-disc list-inside">
+        <ul className="mb-4 text-base text-custom-blue list-disc list-inside">
           {description.split(",").map((item, i) => (
             <li key={i}>{item.trim()}</li>
           ))}
@@ -59,7 +59,7 @@ const CardLocation = ({
           <ul className="flex flex-col gap-5 mt-4">
             {keyfeatures.map((item, i) => (
               <li key={i} className="flex items-center gap-2">
-                <span className="flex items-center justify-center w-8 h-8 bg-gray-100 rounded-full text-custom-primary">
+                <span className="flex items-center justify-center w-8 h-8 bg-gray-100 rounded-full text-custom-blue">
                   {item.icon}
                 </span>
                 <span className="text-gray-600">{item.text}</span>
