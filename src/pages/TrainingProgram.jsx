@@ -210,7 +210,7 @@ export default function TrainingProgram() {
       },
       {
         image: ai,
-        title: "AI",
+        title: "/ai",
         points: [
           "Enhance Managerial And Communication Skills",
           "Gain A Competitive Edge In The Job Market",
