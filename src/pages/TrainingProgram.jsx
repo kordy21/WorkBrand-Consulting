@@ -29,6 +29,7 @@ import icon8 from '../assets/Icons/kames.svg';
 import data from '../assets/images/dattta.webp';
 import ai from '../assets/images/ai.jpg';
 import  merketing from '../assets/images/marketing.webp';
+import hr from '../assets/images/hr.webp';
 import qada3et from '../assets/images/Qa3det.webp';
 import ProgramCardGrid from "../component/trainig program/ProgramCardGrid";
 import { fa7 } from "@fortawesome/free-solid-svg-icons";
@@ -172,7 +173,7 @@ export default function TrainingProgram() {
           "Build Strong Business Networks",
           "Exchange Creative Ideas",
         ],
-        link: "/programs/qa3det-business",
+        link: "/qaadet-bussiness",
       },
       {
         image: merketing,
@@ -183,10 +184,10 @@ export default function TrainingProgram() {
           "Optimize Ads & Marketing Campaigns",
           "Build A Strong Brand Identity",
         ],
-        link: "/programs/marketing-digital",
+        link: "/marketing",
       },
       {
-        image: merketing,
+        image: hr,
         title: "HR & Business Growth",
         points: [
           "Create Professional Job Descriptions",
@@ -194,7 +195,7 @@ export default function TrainingProgram() {
           "Build A Healthy And Scalable Work Culture",
           "Align HR With Business Strategy",
         ],
-        link: "/programs/hr-business-growth",
+        link: "/human-resourse",
       },
       {
         image: data,

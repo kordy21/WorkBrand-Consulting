@@ -158,6 +158,7 @@ export default function Qa3detBusiness() {
                   removeMB={true}
                   showButton={false}
                   showLocationButton={false}
+                  textColor="text-white"
                 />
                 <CardLocation
                   image={benefit2}
@@ -167,6 +168,7 @@ export default function Qa3detBusiness() {
                   removeMB={true}
                   showButton={false}
                   showLocationButton={false}
+                  textColor="text-white"
                 />
                 <CardLocation
                   image={benefit3}
@@ -176,6 +178,7 @@ export default function Qa3detBusiness() {
                   removeMB={true}
                   showButton={false}
                   showLocationButton={false}
+                  textColor="text-white"
                 />
                 <CardLocation
                   image={benefit4}
@@ -185,6 +188,7 @@ export default function Qa3detBusiness() {
                   removeMB={true}
                   showButton={false}
                   showLocationButton={false}
+                  textColor="text-white"
                 />
               </div>
             </div>

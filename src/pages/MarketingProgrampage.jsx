@@ -12,6 +12,12 @@ import learn5 from '../assets/images/learn5.webp';
 import learn6 from '../assets/images/learn6.webp';
 import MainTittle from "../component/sharedComponents/MainTittle";
 import CoursesGrid from "../component/Marketing Program/CourseCard";
+import KeyFeature from "../component/sharedComponents/KeyFeature";
+import realstate from '../assets/Icons/real state.svg';
+import hands from '../assets/Icons/hands.svg';
+import project from '../assets/Icons/projecct.svg';
+import RightPlace from "../component/sharedComponents/RightPlace";
+import Footer from "../component/sharedComponents/Footer";
 export default function MarketingProgram() {
   const coursesData = [
     {
@@ -50,9 +56,34 @@ export default function MarketingProgram() {
       description: "Create A Brand Image That Resonates And Builds Loyalty.",
     },
   ];
-
+const data = [
+  {
+    image: realstate,
+    tittle1: "Real-life case studies",
+    description:
+      "Learn from actual business scenarios to understand what works.",
+  },
+  {
+    image: hands,
+    tittle1: "Hands-on tool usage",
+    description:
+      "Practice using essential digital marketing tools and analytics platforms..",
+  },
+  {
+    image: project,
+    tittle1: "Project-based learning",
+    description:
+      "Apply what you learn in real projects to gain practical experience.",
+  },
+    {
+    image: realstate,
+    tittle1: "Real-life case studies",
+    description:
+      "Learn from actual business scenarios to understand what works.",
+  },
+];
   return (
-    <main>
+    <main className="bg-custom-yellow">
       <HeaderLayout />
       <HeroSection
         backgroundImage={marketing}
@@ -76,13 +107,35 @@ export default function MarketingProgram() {
       </section>
       {/* second */}
       <section className="bg-custom-black">
+        <div className="max-container">
         <div>
           <MainTittle title="What You’ll Learn" />
         </div>
-        <div className=" max-container">
+        <div >
           <CoursesGrid courses={coursesData} />
         </div>
+        </div>
       </section>
+      {/* third */}
+      <section className="bg-custom-yellow">
+        <div className=" p-5 md:pt-12">
+          <MainTittle title="Training Approach" />
+        </div>
+        <div className="pt-5">
+          <KeyFeature
+            title="Our Features"
+            align="left"
+            white={true}
+            icons={data}
+            showTitle={false}
+          />
+        </div>
+        <div className="mt-20">
+
+        <RightPlace/>
+        </div>
+      </section>
+      <Footer/>
     </main>
   );
 }

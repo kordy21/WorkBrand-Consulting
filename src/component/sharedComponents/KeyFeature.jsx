@@ -19,22 +19,24 @@ const KeyFeature = ({
         </h2>
       )}
 
-      <div className="grid grid-cols-1 gap-6 px-4 md:grid-cols-2 lg:grid-cols-4 lg:px-0">
+      <div className="grid grid-cols-1 gap-6 px-4 md:grid-cols-2 lg:grid-cols-3 lg:px-0">
         {icons.map((item, index) => (
           <div
             key={index}
             className={`group relative flex flex-col ${justifyClass} ${itemsClass} ${textClass} p-4 rounded-xl shadow-md transition-all duration-300 min-h-[128px] 
-              ${
-                transparent
-                  ? "bg-transparent text-white border border-gray-300 hover:bg-white hover:text-black"
-                  : "bg-white text-black border border-gray-300"
-              }`}
+             ${
+               transparent
+                 ? "bg-transparent text-white border border-gray-300 hover:bg-white/30 hover:text-white"
+                 : "bg-white text-black border border-gray-300"
+             }
+`}
           >
             <img
               src={item.image}
               alt={`feature-${index}`}
-              className="relative object-contain w-8 h-8 mb-4"
+              className="relative object-contain w-8 h-8 mb-4 transition-none group-hover:opacity-100"
             />
+
             <h1 className="text-xl font-semibold transition-colors duration-300 w-[90%]">
               {item.tittle1}
             </h1>

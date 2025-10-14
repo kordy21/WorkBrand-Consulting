@@ -11,11 +11,11 @@ export default function AboutProgram({
 }) {
   return (
     <div
-      className={`flex flex-col lg:flex-row gap-6  text-white p-5 rounded-lg ${
+      className={`flex flex-col lg:flex-row gap-6    text-white pt-8 px-5 md:px-0 rounded-lg ${
         showBorder ? "border border-gray-300" : ""
       }`}
     >
-      <div className="lg:w-1/2">
+      <div className="lg:w-1/2 text-start">
         <img
           src={imageSrc}
           alt="Program"
@@ -23,7 +23,7 @@ export default function AboutProgram({
         />
       </div>
       <div className="lg:w-1/2 mt-4 md:mt-0">
-        <h2 className="text-2xl font-semibold text-custom-blue mb-4">
+        <h2 className="text-2xl font-semibold text-custom-blue my-4">
           {title}
         </h2>
         <p className="text-gray-300 mb-4">{description}</p>
