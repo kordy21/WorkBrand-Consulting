@@ -206,7 +206,7 @@ export default function TrainingProgram() {
           "Hands-On Training With AI-Powered Tools And Techniques",
           "100% Practical With Real Business Case Applications",
         ],
-        link: "/programs/data-analysis",
+        link: "/data-analyisis",
       },
       {
         image: ai,
@@ -217,7 +217,7 @@ export default function TrainingProgram() {
           "Learn Key AI Tools For Productivity And Decision-Making",
           "Stay Innovative And Adapt To Modern Workplace Trends",
         ],
-        link: "/programs/ai",
+        link: "/ai",
       },
     ];
   return (
