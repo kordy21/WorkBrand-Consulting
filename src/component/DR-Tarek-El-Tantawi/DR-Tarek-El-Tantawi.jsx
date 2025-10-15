@@ -169,7 +169,7 @@ const tarektantawi = () => {
         <LocationSection />
 
         <ProgramsSection
-          sectionTitle="Dr. Tariq's Programs"
+          sectionTitle="Dr. Tarek's Programs"
           sectionDescription="The following training programs are offered under the supervision of lecturer, businessman, and corporate restructuring consultant Tarek El Tantawy:"
           programs={[
             {
@@ -197,7 +197,8 @@ const tarektantawi = () => {
           phonesTel="+20 102 999 9210"
           phonesMob="+20 120 559 9333"
           email="info@workbrand.org"
-          address="72 Gannet Al Dowal Al Arbaa St, Mohandessin, Giza, Egypt"
+          address="72 Arab League Street, Dokki, Dokki District, Giza Governorate 12411
+"
         />
         <MapSection />
       </section>

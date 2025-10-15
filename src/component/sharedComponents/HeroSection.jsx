@@ -17,7 +17,7 @@ const HeroSection = ({ backgroundImage, title, description, buttonText }) => {
       onClick={() => setIsPopupOpen(false)}
     >
       <div
-        className="bg-white rounded-2xl p-6 w-[500px] shadow-lg relative"
+        className="bg-white rounded-2xl p-6 w-full max-w-[600px] mx-4 shadow-lg relative"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -45,9 +45,7 @@ const HeroSection = ({ backgroundImage, title, description, buttonText }) => {
       <div className="absolute inset-0 bg-black bg-opacity-40"></div>
 
       <div
-        className={`relative z-10 flex flex-col items-center justify-center px-0 mb-4 text-white md:items-start ${
-          isSmallPage ? "pr-[150px] lg:pr-[750px]" : "lg:pr-56"
-        }`}
+        className={`relative z-10 flex flex-col items-center justify-center px-4 mb-4 text-white md:items-start max-w-[1000px] w-full`}
       >
         <h1
           className={`mt-4 md:mb-4 font-bold ${
@@ -58,7 +56,7 @@ const HeroSection = ({ backgroundImage, title, description, buttonText }) => {
         </h1>
 
         <p
-          className={`flex max-w-3xl p-5 mx-auto text-center md:text-start md:p-0 ${
+          className={`flex max-w-3xl w-full p-5 md:p-0 text-left ${
             isSmallPage ? "text-base md:text-lg" : "text-lg md:text-lg"
           }`}
         >

@@ -24,13 +24,25 @@ export default function Head() {
     <section className="relative hidden bg-custom-gradient-black lg:block">
       <div className="z-10 flex items-center justify-between px-2 py-2 max-container">
         <div className="flex items-center ">
-          <ButtonUnderLine name={t("About")} link={"/about-us"} />
+          <ButtonUnderLine
+            name={t("About")}
+            link={"https://new.workbrand.org/about-us"}
+          />
           <Divider />
-          <ButtonUnderLine name={t("Location")} link={"/location"} />
+          <ButtonUnderLine
+            name={t("Location")}
+            link={"https://new.workbrand.org/location"}
+          />
           <Divider />
-          <ButtonUnderLine name={t("Careers")} link={"/career"} />
+          <ButtonUnderLine
+            name={t("Careers")}
+            link={"https://new.workbrand.org/career"}
+          />
           <Divider />
-          <ButtonUnderLine name={t("contact")} link={"/contact-us"} />
+          <ButtonUnderLine
+            name={t("contact")}
+            link={"https://new.workbrand.org/contact-us"}
+          />
           {/* <Divider /> */}
           {/* <ButtonUnderLine name={t("Coupon")} link={"/coming-soon"} /> */}
         </div>
@@ -51,7 +63,11 @@ export default function Head() {
                 className="text-white duration-300 hover:text-custom-primary"
               />
             </a>
-            <a href="https://wa.me/+20 102 999 9210" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://wa.me/+20 102 999 9210"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon
                 icon={faWhatsapp}
                 className="text-white duration-300 hover:text-custom-primary"
