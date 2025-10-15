@@ -157,19 +157,19 @@ const menuDataDes = {
         id: 1,
         headline1: "Media Agency Services",
         subItems: [
-          { name: "Media Coverage", link: "/http://agency.workbrand.org" },
+          { name: "Media Coverage", link: "http://agency.workbrand.org" },
           {
             name: "Models Supply for Photoshoots",
-            link: "/http://agency.workbrand.org",
+            link: "http://agency.workbrand.org",
           },
-          { name: "Voiceover Services", link: "/http://agency.workbrand.org" },
+          { name: "Voiceover Services", link: "http://agency.workbrand.org" },
           {
             name: "Podcast Hosting Services",
-            link: "/http://agency.workbrand.org",
+            link: "http://agency.workbrand.org",
           },
           {
             name: "Creative Development",
-            link: "/http://agency.workbrand.org",
+            link: "http://agency.workbrand.org",
           },
           {
             name: "Professional Studios",
