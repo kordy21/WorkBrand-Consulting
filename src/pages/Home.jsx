@@ -110,7 +110,7 @@ const Home = () => {
         buttonText="Book Your Consultation"
         description="Years of experience in consulting and corporate management… drawing the path to success in your business."
       />
-      <section className="max-container ">
+      <section className="max-container">
         <WhoWeAreSection
           mobileTitle="About Dr. Tarek El Tantawi"
           mobileDescription="For many years, the entrepreneurial vision of businessman and corporate restructuring consultant Tarek El Tantawi has flourished..."
@@ -121,12 +121,19 @@ const Home = () => {
           philosophyDescription="For many years, the entrepreneurial vision of businessman and corporate restructuring consultant Dr. Tarek El Tantawi has flourished, delivering transformative solutions and strategies for hundreds of projects across diverse sectors, regionally and globally. His expertise spans financial restructuring, strategic planning, and operational excellence, enabling organizations to achieve sustainable growth and enhanced efficiency. Dr. El Tantawi’s innovative approach, combined with his deep understanding of market dynamics, has earned him recognition as a trusted advisor for businesses aiming to thrive in competitive environments. His commitment to excellence and transformative impact continues to inspire and shape the future of numerous enterprises worldwide."
         />
         <OurImpactSection />
+      </section>
+      <section className=" bg-gradient-to-br from-[#282727] to-[#151516]">
+
+      <div className="max-container">
         <InsightsSection
           any="yes"
           data={insightsData}
           sectionTitle="Our Consulting Services"
           sectionDescription="Strategic Consulting tailored for companies, business owners, and professionals — designed to boost efficiency, streamline operations, and guide your business to sustainable growth."
         />
+      </div>
+      </section>
+      <section className="max-container ">
         <ConsultingSection
           image={benfit}
           title="Benefits From The Consulting Sessions"

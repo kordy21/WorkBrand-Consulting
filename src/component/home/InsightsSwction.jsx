@@ -1,116 +1,175 @@
-// File: AreasOfExpertise.jsx
-import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 
-const areas = [
+const expertiseData = [
   {
     id: 1,
     title: "Executive Coaching & Leadership",
-    desc: "Empowering leaders to achieve strategic clarity, inspire teams, and drive sustainable growth through executive coaching and transformative leadership practices.",
+    desc: "Helping executives unlock their full potential, strengthen leadership skills, and build high-performing teams through data-driven coaching frameworks.",
+    image: "https://images.unsplash.com/photo-1556761175-4b46a572b786?w=800",
   },
   {
     id: 2,
     title: "Strategic Planning & Organizational Transformation",
-    desc: "Guiding organizations in building agile strategies and executing change management initiatives that ensure long-term success.",
+    desc: "Guiding organizations to reimagine their strategic direction and execute transformative plans that drive sustainable growth.",
+    image: "https://images.unsplash.com/photo-1532619187608-e5375cab36aa?w=800",
   },
   {
     id: 3,
     title: "Business Model Innovation & Market Expansion",
-    desc: "Designing innovative business models and enabling market entry strategies that maximize value and competitive advantage.",
+    desc: "Identifying innovative business models and expansion opportunities that align with evolving markets and technologies.",
+    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800",
   },
   {
     id: 4,
     title: "Human Capital Development",
-    desc: "Cultivating a high-performance culture by developing people, leadership pipelines, and organizational capabilities.",
+    desc: "Designing initiatives to nurture talent, strengthen employee engagement, and build resilient corporate cultures.",
+    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800",
   },
   {
     id: 5,
     title: "Governmental Advisory & Policy Implementation",
-    desc: "Supporting public institutions with evidence-based advisory to enhance governance, policy design, and execution efficiency.",
+    desc: "Collaborating with governments to shape policies and implement programs focused on economic resilience and innovation.",
+    image: "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=800",
   },
   {
     id: 6,
     title: "Brand Identity & Personal Branding",
-    desc: "Crafting authentic brand identities that reflect purpose, values, and a compelling market presence.",
+    desc: "Crafting distinctive brand identities and personal brand strategies that elevate visibility and credibility in competitive markets.",
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800",
   },
 ];
 
-export default function AreasOfExpertise() {
-  const [active, setActive] = useState(areas[0]);
+export default function InsightsSection() {
+  const [activeTab, setActiveTab] = useState(expertiseData[0]);
 
   return (
-    <div className="relative  min-h-screen flex-col items-center justify-center bg-[#0f0f12] text-white px-6 py-20 overflow-hidden">
-      <div className="max-container">
+    <section className="relative w-full overflow-hidden py-24 text-white">
+      {/* Background Gradient Animation */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#282727] to-[#151516]">
+        <motion.div
+          className="absolute inset-0 opacity-40"
+          animate={{
+            background: [
+              "radial-gradient(circle at 20% 30%, rgba(40,39,39,0.2), transparent 70%)",
+              "radial-gradient(circle at 80% 70%, rgba(21,21,22,0.25), transparent 70%)",
+              "radial-gradient(circle at 50% 50%, rgba(40,39,39,0.2), transparent 70%)",
+            ],
+          }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        />
+      </div>
 
-      <h3 className="text-2xl font-semibold text-custom-blue mb-2 ">
-        Areas Of Expertise
-      </h3>
-      <p className="text-sm text-gray-400 mb-8">
-        An Expert In Corporate Risk Management, Supporting Organizations Seeking
-        A Calculated And Risk-Conscious Transformation
-      </p>
-      <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-12">
-        {/* Left Circle Section */}
-        <div className="flex items-center justify-center relative">
-          <div className="absolute w-[300px] h-[300px] rounded-full border border-gray-700"></div>
-          <div className="absolute w-[400px] h-[400px] rounded-full border border-gray-800"></div>
-          <div className="absolute w-[500px] h-[500px] rounded-full border border-gray-900"></div>
+      <div className="w-full px-6 md:px-12 lg:px-20 relative z-10 flex flex-col lg:flex-row items-center gap-16">
+        {/* Left Side - Glowing Circles & Changing Image */}
+        <div className="relative w-full lg:w-1/2 flex justify-center items-center">
+          <div className="relative">
+            {[...Array(4)].map((_, i) => (
+              <motion.div
+                key={i}
+                className="absolute rounded-full border border-blue-500/20 shadow-[0_0_20px_#007bff30]"
+                style={{
+                  width: `${220 + i * 120}px`,
+                  height: `${220 + i * 120}px`,
+                  top: `-${i * 60}px`,
+                  left: `-${i * 60}px`,
+                }}
+                animate={{ opacity: [0.2, 0.8, 0.2], scale: [1, 1.05, 1] }}
+                transition={{
+                  duration: 5 + i,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              />
+            ))}
 
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeTab.id}
+                className="relative z-10 text-center"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.8 }}
+              >
+                <h2 className="text-xl font-light tracking-widest leading-snug mb-3">
+                  <span className="block text-gray-300 text-sm mb-1">
+                    Comprehensive
+                  </span>
+                  <span
+                    className="font-semibold text-2xl text-custom-blue
+                  "
+                  >
+                    Expertise
+                  </span>
+                </h2>
+                <motion.img
+                  src={activeTab.image}
+                  alt={activeTab.title}
+                  className="rounded-2xl shadow-xl border border-gray-700"
+                />
+              </motion.div>
+            </AnimatePresence>
+          </div>
+        </div>
+
+        {/* Right Side - Tabs */}
+        <div className="w-full lg:w-1/2">
+          <motion.h3
+            initial={{ y: 40, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="text-3xl md:text-4xl font-semibold mb-6 text-custom-blue"
+          >
+            Areas Of Expertise
+          </motion.h3>
+
+          <div className="space-y-3">
+            {expertiseData.map((item, i) => (
+              <motion.div
+                key={item.id}
+                onClick={() => setActiveTab(item)}
+                initial={{ x: 60, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                viewport={{ once: true }}
+                className={`flex items-center gap-4 cursor-pointer rounded-xl p-5 transition-all border ${
+                  activeTab.id === item.id
+                    ? "bg-[#10121a]/80 border-blue-500 shadow-[0_0_15px_#007bff50]"
+                    : "bg-[#10121a]/50 border-gray-700 hover:border-blue-500"
+                }`}
+              >
+                <div
+                  className={`flex items-center justify-center w-10 h-10 rounded-full border font-semibold ${
+                    activeTab.id === item.id
+                      ? "bg-blue-500/20 border-blue-400 text-blue-300"
+                      : "bg-blue-500/10 border-gray-600 text-gray-400"
+                  }`}
+                >
+                  {item.id}
+                </div>
+                <p className="text-gray-200 font-medium text-sm md:text-base">
+                  {item.title}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Active Tab Description */}
           <AnimatePresence mode="wait">
             <motion.div
-              key={active.id}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.5 }}
-              className="text-center max-w-sm"
+              key={activeTab.id}
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -15 }}
+              transition={{ duration: 0.6 }}
+              className="mt-8 bg-[#0f121a]/70 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 shadow-[0_0_20px_#00000050]"
             >
-              <h2 className="text-xl font-semibold text-blue-400 mb-3">
-                Comprehensive Expertise
-              </h2>
-              <p className="text-gray-300 text-sm leading-relaxed">
-                {active.desc}
-              </p>
+              <p className="text-gray-300 leading-relaxed">{activeTab.desc}</p>
             </motion.div>
           </AnimatePresence>
         </div>
-
-        {/* Right Zigzag Tabs */}
-        <div className="flex flex-col justify-center relative">
-      
-          <div className="relative">
-            {areas.map((area, i) => {
-              const isLeft = i % 2 === 0;
-              return (
-                <motion.button
-                  key={area.id}
-                  onClick={() => setActive(area)}
-                  initial={{ opacity: 0, x: isLeft ? -80 : 80 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className={`absolute flex items-center gap-3 px-5 py-3 rounded-lg border transition-all duration-300 ${
-                    active.id === area.id
-                      ? "bg-custom-blue border-blue-500 text-white shadow-lg"
-                      : "bg-[#1a1a1f] border-gray-700 text-gray-300 hover:bg-[#22222a]"
-                  }`}
-                  style={{
-                    top: `${i * 75}px`,
-                    left: isLeft ? "0px" : "100px",
-                    width: "calc(100% - 100px)",
-                  }}
-                >
-                  <span className="flex items-center justify-center w-6 h-6 text-xs font-semibold bg-custom-blue text-white rounded-full">
-                    {i + 1}
-                  </span>
-                  <span className="text-sm font-medium">{area.title}</span>
-                </motion.button>
-              );
-            })}
-            <div className="h-[600px]" />
-          </div>
-        </div>
       </div>
-      </div>
-    </div>
+    </section>
   );
 }
