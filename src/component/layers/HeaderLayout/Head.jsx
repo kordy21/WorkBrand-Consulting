@@ -20,6 +20,8 @@ import { useNavigate } from "react-router-dom";
 export default function Head() {
   const { t } = useTranslation();
   const navigate = useNavigate();
+const baseUrl = process.env.REACT_APP_BASE_URL;
+
   return (
     <section className="relative hidden bg-custom-gradient-black lg:block">
       <div className="z-10 flex items-center justify-between px-2 py-2 max-container">
@@ -51,8 +53,9 @@ export default function Head() {
             <CustomMainButton
               text={t("Portal")}
               hover_white={true}
-              onClick={() => navigate("/portal")}
+              onClick={() => window.open(`${baseUrl}/portal`, "_blank")}
             />
+
             <a
               href="mailto:info@workbrand.org"
               target="_blank"

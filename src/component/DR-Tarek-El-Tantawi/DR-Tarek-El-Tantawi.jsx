@@ -163,7 +163,7 @@ const tarektantawi = () => {
           sectionTitle="Areas of Expertise"
           sectionDescription="Strategic Consulting tailored for companies, business owners, and professionals — designed to boost efficiency, streamline operations, and guide your business to sustainable growth."
         />
-        <div>
+        <div > 
           <GuidingPhilosophy />
         </div>
         <LocationSection />

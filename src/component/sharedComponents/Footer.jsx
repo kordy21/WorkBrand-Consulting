@@ -41,11 +41,11 @@ export default function Footer() {
   }, []);
 
   const services = {
-    "Services ":`${baseUrl}/services`,
+    "Services ": `${baseUrl}/services`,
     "Offices ": `${baseUrl}/offices`,
-    "Consulting ": "/coming-soon",
+    "Consulting ": "/",
     "Create Website": "/coming-soon",
-    "Media Agency": "/coming-soon",
+    "Media Agency": "https://agency.workbrand.org",
   };
 
   const importantLinks = {
