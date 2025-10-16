@@ -113,7 +113,7 @@ export default function Qa3detBusiness() {
           />
           {/* fisst */}
           <section className="bg-custom-black">
-            <div className="max-container">
+            <div className="max-container py-8">
               <AboutProgram
                 imageSrc={qa3da}
                 title="What is Qa3det Business?"
@@ -130,7 +130,7 @@ The goal is to challenge business myths and provide actionable, practical ideas 
           {/* Second */}
           <section className="bg-white pb-5 ">
             <div className="max-container">
-              <div className="pt-5">
+              <div className="pt-5 md:pt-8">
                 <MainTittle
                   title="Key Topics Covered"
                   description="Essential topics to launch and grow your business"
@@ -145,7 +145,7 @@ The goal is to challenge business myths and provide actionable, practical ideas 
           {/* third */}
           <section className=" bg-custom-black">
             <div className="max-container">
-              <div className=" pt-6  md:py-5">
+              <div className=" pt-6  md:pt-5">
                 <MainTittle title="Key Benefits" />
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-6 ">
@@ -194,7 +194,7 @@ The goal is to challenge business myths and provide actionable, practical ideas 
           </section>
           {/* fourth */}
           <section className="bg-custom-gradient-bg">
-            <div className="pt-5">
+            <div className="pt-5 md:pt-8">
               <MainTittle title="About Tarek El-Tantawi" />
             </div>
             <div>

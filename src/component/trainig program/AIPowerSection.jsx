@@ -2,7 +2,7 @@ import { useState } from "react";
 import CustomMainButton from "../sharedComponents/CustomMainButton";
 import AAii from "../../assets/images/AAii.webp";
 import TripleArrowIcon from "../sharedComponents/TripleArrowIcon";
-import UnderLineForm from "../sharedComponents/UnderLineForm"; // ← تأكد إن المسار صحيح
+import UnderLineForm from "../sharedComponents/UnderLineForm"; 
 
 export default function AIPowerSection() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -13,7 +13,7 @@ export default function AIPowerSection() {
   };
 
   return (
-    <section className="bg-[#1a1a1a] text-white flex flex-col md:flex-row items-center justify-between rounded-2xl overflow-hidden shadow-lg">
+    <section className="bg-[#1a1a1a] text-white flex flex-col md:flex-row items-center justify-between rounded-2xl overflow-hidden shadow-lg md:py-8">
       {/* Left Image */}
       <div className="w-full md:w-1/2">
         <img src={AAii} alt="AI Power" className="w-full h-full object-cover" />

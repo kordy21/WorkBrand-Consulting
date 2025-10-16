@@ -73,9 +73,9 @@ export default function InsightsSection() {
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
 
-      <div className="relative z-10 w-full px-6 md:px-12 lg:px-20 flex flex-col lg:flex-row items-center gap-16">
+      <div className="relative z-10 w-full px-6 md:px-12 lg:px-20 flex flex-col lg:flex-row items-center gap-12">
         {/* 🖼 Left Side - Animated Image + Glowing Circles */}
-        <div className="relative w-full lg:w-1/2 flex justify-center items-center">
+        <div className="relative w-full lg:w-1/2 px-5 flex justify-center items-center">
           <div className="relative">
             {[...Array(3)].map((_, i) => (
               <motion.div

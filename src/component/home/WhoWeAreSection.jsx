@@ -25,7 +25,7 @@ const WhoWeAreSection = ({
       </p>
 
       {/* Image */}
-      <div className="w-full lg:w-[60%]">
+      <div className="w-full lg:w-[50%]">
         <img
           src={imageSrc}
           alt="who we are"
@@ -34,7 +34,7 @@ const WhoWeAreSection = ({
       </div>
 
       {/* Desktop Content */}
-      <div className="w-full lg:w-[40%] flex flex-col justify-center">
+      <div className="w-full lg:w-[50%] flex flex-col justify-center">
         <div className="hidden md:block">
           <MainTittle
             title={desktopTitle}

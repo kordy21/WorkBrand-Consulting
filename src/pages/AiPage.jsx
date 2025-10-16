@@ -112,7 +112,7 @@ const data = [
       {/* second */}
       <section className=" bg-custom-black">
         <div className="max-container">
-          <div className="py-5">
+          <div className="py-5 md:pt-8">
             <MainTittle title="Key Benefits" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-6 ">

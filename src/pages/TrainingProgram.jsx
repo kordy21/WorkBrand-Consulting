@@ -231,7 +231,7 @@ export default function TrainingProgram() {
         isSmall={true}
       />
       {/* fisst */}
-      <section className="bg-custom-black">
+      <section className="bg-custom-black pb-8">
         <div className="max-container">
           <AboutProgram
             imageSrc={Trainig1}
@@ -248,9 +248,9 @@ export default function TrainingProgram() {
         </div>
       </section>
       {/* second  */}
-      <section className="bg-white pb-5 ">
+      <section className="bg-white pb-8 ">
         <div className="max-container">
-          <div className="pt-5">
+          <div className="pt-7 md:pt-8">
             <MainTittle
               title="Program Topics"
               description="WorkBrand Media Agency covers every stage of creative production, offering a full-circle experience"
@@ -264,7 +264,7 @@ export default function TrainingProgram() {
       </section>
       {/* third */}
       <section className="bg-custom-black pb-5">
-        <div className="py-5">
+        <div className="py-5 md:py-8">
           <MainTittle title="Main Program Objectives" />
         </div>
         <div>

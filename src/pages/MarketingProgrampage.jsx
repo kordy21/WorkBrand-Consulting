@@ -1,7 +1,7 @@
 import React from "react";
 import HeaderLayout from "../component/layers/HeaderLayout/HeaderLayout";
 import HeroSection from "../component/sharedComponents/HeroSection";
-import marketing from '../assets/images/marketingpafe.webp';
+import marketing from "../assets/images/marketingpafe .webp";
 import AboutProgram from "../component/trainig program/AboutProgram";
 import markeeting from '..//assets/images/MARKETINNNNG.webp';
 import learn1 from '../assets/images/learn1.webp';
@@ -103,7 +103,7 @@ const data = [
       {/* second */}
       <section className="bg-custom-black">
         <div className="max-container">
-          <div>
+          <div className="pt-5">
             <MainTittle title="What You’ll Learn" />
           </div>
           <div>

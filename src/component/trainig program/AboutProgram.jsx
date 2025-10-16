@@ -23,7 +23,7 @@ export default function AboutProgram({
         />
       </div>
       <div className="lg:w-1/2 mt-4 md:mt-0">
-        <h2 className="text-4xl font-semibold text-custom-blue my-4">
+        <h2 className="text-4xl font-semibold text-custom-blue ">
           {title}
         </h2>
         <p className="text-gray-300 mb-4">{description}</p>
