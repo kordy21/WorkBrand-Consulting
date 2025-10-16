@@ -75,20 +75,15 @@ const data = [
     description:
       "Apply what you learn in real projects to gain practical experience.",
   },
-    {
-    image: realstate,
-    tittle1: "Real-life case studies",
-    description:
-      "Learn from actual business scenarios to understand what works.",
-  },
 ];
   return (
     <main className="bg-custom-yellow">
       <HeaderLayout />
       <HeroSection
         backgroundImage={marketing}
-        title="Marketing & Digital Program "
+        title="Marketing & Digital Marketing Program"
         buttonText="Book your training"
+        
         description="An engaging environment to learn, discuss, and grow."
       />{" "}
       {/* fisst */}
@@ -108,17 +103,17 @@ const data = [
       {/* second */}
       <section className="bg-custom-black">
         <div className="max-container">
-        <div>
-          <MainTittle title="What You’ll Learn" />
-        </div>
-        <div >
-          <CoursesGrid courses={coursesData} />
-        </div>
+          <div>
+            <MainTittle title="What You’ll Learn" />
+          </div>
+          <div>
+            <CoursesGrid courses={coursesData} />
+          </div>
         </div>
       </section>
       {/* third */}
       <section className="bg-custom-yellow">
-        <div className=" p-5 md:pt-12">
+        <div className=" pt-8 md:pt-12">
           <MainTittle title="Training Approach" />
         </div>
         <div className="pt-5">
@@ -130,12 +125,11 @@ const data = [
             showTitle={false}
           />
         </div>
-        <div className="mt-20">
-
-        <RightPlace/>
+        <div className="mt-5">
+          <RightPlace />
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </main>
   );
 }

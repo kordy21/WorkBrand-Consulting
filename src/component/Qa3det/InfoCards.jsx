@@ -2,7 +2,7 @@ import React from "react";
 
 const InfoCards = ({ items }) => {
   return (
-    <div className="flex flex-col md:flex-row justify-center items-stretch gap-4 p-5">
+    <div className="flex flex-col md:flex-row justify-center items-stretch gap-6 p-5">
       {items.map((item, index) => (
         <div
           key={index}

@@ -116,7 +116,7 @@ const DataAnalysis = () => {
       {/* second */}
       <section className=" bg-custom-black">
         <div className="max-container">
-          <div className="py-5">
+          <div className="pt-5">
             <MainTittle title="What You’ll Learn" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-6 ">
@@ -192,7 +192,7 @@ const DataAnalysis = () => {
         </div>
       </section>
       {/* fiifth */}
-      <section className="pt-20">
+      <section className="pt-10">
         <RightPlace/>
       </section>
 

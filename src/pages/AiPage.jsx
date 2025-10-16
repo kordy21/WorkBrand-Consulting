@@ -186,7 +186,7 @@ const data = [
             items={moduleItems}
           />
         </div>
-        <div className="mt-20">
+        <div className="mt-5">
           <RightPlace />
         </div>
       </section>

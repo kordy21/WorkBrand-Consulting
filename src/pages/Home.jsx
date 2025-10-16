@@ -106,7 +106,7 @@ const Home = () => {
       <HeaderLayout />
       <HeroSection
         backgroundImage={Doctor}
-        title="Consulting services "
+        title="Consulting services for evaluation and solutions "
         buttonText="Book Your Consultation"
         description="Years of experience in consulting and corporate management… drawing the path to success in your business."
       />
@@ -120,18 +120,21 @@ const Home = () => {
           philosophyTitle="Philosophy & Vision"
           philosophyDescription="For many years, the entrepreneurial vision of businessman and corporate restructuring consultant Dr. Tarek El Tantawi has flourished, delivering transformative solutions and strategies for hundreds of projects across diverse sectors, regionally and globally. His expertise spans financial restructuring, strategic planning, and operational excellence, enabling organizations to achieve sustainable growth and enhanced efficiency. Dr. El Tantawi’s innovative approach, combined with his deep understanding of market dynamics, has earned him recognition as a trusted advisor for businesses aiming to thrive in competitive environments. His commitment to excellence and transformative impact continues to inspire and shape the future of numerous enterprises worldwide."
         />
-        <OurImpactSection />
+        
+        <OurImpactSection
+          title="Our Impact"
+          description="Key Stats That Show Our Real Growth"
+        />
       </section>
       <section className=" bg-gradient-to-br from-[#282727] to-[#151516]">
-
-      <div className="max-container">
-        <InsightsSection
-          any="yes"
-          data={insightsData}
-          sectionTitle="Our Consulting Services"
-          sectionDescription="Strategic Consulting tailored for companies, business owners, and professionals — designed to boost efficiency, streamline operations, and guide your business to sustainable growth."
-        />
-      </div>
+        <div className="max-container">
+          <InsightsSection
+            any="yes"
+            data={insightsData}
+            sectionTitle="Our Consulting Services"
+            sectionDescription="Strategic Consulting tailored for companies, business owners, and professionals — designed to boost efficiency, streamline operations, and guide your business to sustainable growth."
+          />
+        </div>
       </section>
       <section className="max-container ">
         <ConsultingSection
@@ -143,7 +146,7 @@ const Home = () => {
             "Consulting Sessions With Strategic Expert Tarek El-Tantawi Provide A Deep And Useful Vision That Contributes To Achieving Success And Growth For Both Institutions And Individuals, Especially In Investment Solutions And Evaluation Of Innovative Ideas And Verifying Their Innovation Before Planning.",
           ]}
         />
-        <div className="mt-10">
+        <div className=" my-5 md:mt-10">
           <MainTitle title="Who is targeted?" />
         </div>
         <KeyFeature

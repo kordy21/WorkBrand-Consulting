@@ -281,15 +281,17 @@ export default function TrainingProgram() {
         <div className="max-container">
           <AboutProgram
             imageSrc={Trainig1}
-            title="About The Program"
-            description="In An Increasingly Competitive Job Market, Degrees Alone Are No Longer Enough. Success Now Depends On Real Skills, Innovation, Self-Confidence, And Strong Communication And Teamwork Abilities."
+            title="The Trainer"
+            description="Tarek El Tantawi Businessman and Corporate Restructuring Consultant"
             goalTitle="Our Goal Is To Equip You With The Capabilities That Make You The Ideal Candidate For Any Organization:"
             goals={[
-              "Professional Administrative Skills",
-              "Practical Experience That Bridges Theory And Real-World Application",
-              "A Deep Understanding Of The Work Environment And Its Demands",
+              "Contributed to the establishment and development of over 125 industrial, commercial, and service projects",
+              "Delivered more than 3,000 consultations, proposals, and business plans throughout his career",
+              "Holds 3 MBA degrees in Marketing, HR, and Strategic Management, and a DBA in Institutional Excellence from the U.S.",
+              "Author of 18 books in Arabic and English in the fields of management, marketing, and HR — including Modern Trends in HR and Exploring Corporate Strategy",
+              "Honored by Abu Dhabi University as the Best Strategic Expert and Business Developer",
             ]}
-            showBorder={true}
+            showBorder={false}
           />
         </div>
       </section>
@@ -325,7 +327,7 @@ export default function TrainingProgram() {
           <AIPowerSection />
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </main>
   );
 }

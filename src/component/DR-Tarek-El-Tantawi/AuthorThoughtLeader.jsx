@@ -12,8 +12,8 @@ const AuthorThoughtLeader = () => {
 
   return (
     <section className="bg-custom-gradient-black text-white py-12">
-      <div className="max-container grid grid-cols-1 md:grid-cols-2 items-center gap-10">
-        <div className="rounded-2xl overflow-hidden shadow-lg w-full md:w-[90%] mx-auto">
+      <div className="max-container grid grid-cols-1 md:grid-cols-2 items-center gap-6">
+        <div className="rounded-2xl overflow-hidden shadow-lg w-full md:w-[100%] mx-auto">
           <img
             src={doctor}
             alt="Author and Thought Leader"
@@ -21,7 +21,7 @@ const AuthorThoughtLeader = () => {
           />
         </div>
 
-        <div className="lg:w-[90%] px-5 md:p-0">
+        <div className="lg:w-[90%] px-5 md:pt-0">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center md:text-start">
             Thought Leadership
           </h2>

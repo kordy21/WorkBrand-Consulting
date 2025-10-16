@@ -2,7 +2,7 @@ import React from "react";
 
 export default function GuidingPhilosophy() {
   return (
-    <div className="flex justify-center items-center pt-5">
+    <div className="flex justify-center items-center  px-5 md:px-0 pb-8 pt-12">
       <div className="bg-white shadow-md rounded-lg p-5 max-container  w-full">
         <h2 className="text-2xl md:text-4xl font-bold  text-custom-blue mb-4">
           Our Guiding Philosophy

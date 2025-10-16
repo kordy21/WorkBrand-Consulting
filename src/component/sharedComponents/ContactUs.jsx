@@ -58,6 +58,8 @@ const ContactUs = ({ phonesTel, phonesMob, email, address }) => {
           {/* Address */}
           <a
             href="https://maps.app.goo.gl/6AKiJt28VMgBRqNh9"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-start justify-start gap-3 text-white duration-300 hover:text-custom-blue group"
           >
             <MapPinIcon className="w-5 h-5 text-white duration-300 group-hover:text-custom-blue" />

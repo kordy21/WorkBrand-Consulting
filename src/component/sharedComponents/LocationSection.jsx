@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 
 const LocationSection = () => {
   return (
-    <section className="px-4 xl:px-0 max-container">
+    <section className=" xl:px-0 max-container">
       <motion.div
         initial="hidden"
         whileInView="show"

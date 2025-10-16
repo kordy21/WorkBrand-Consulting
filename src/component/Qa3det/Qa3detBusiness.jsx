@@ -103,7 +103,7 @@ export default function Qa3detBusiness() {
     return (
       <>
         <HeaderLayout />
-        <main>
+        <main className="bg-custom-gradient-bg">
           <HeroSection
             backgroundImage={Qaadet}
             title="Qa3det Business"
@@ -116,13 +116,12 @@ export default function Qa3detBusiness() {
             <div className="max-container">
               <AboutProgram
                 imageSrc={qa3da}
-                title="About The Program"
-                description="In An Increasingly Competitive Job Market, Degrees Alone Are No Longer Enough. Success Now Depends On Real Skills, Innovation, Self-Confidence, And Strong Communication And Teamwork Abilities."
-                goalTitle="Our Goal Is To Equip You With The Capabilities That Make You The Ideal Candidate For Any Organization:"
+                title="What is Qa3det Business?"
+                description="Qa3det Business is an intensive, interactive session led by business consultant Tarek El-Tantawi, a veteran with over 26 years of experience and a PhD in Strategic Management. 
+The goal is to challenge business myths and provide actionable, practical ideas to help you achieve your business goals."
+                goalTitle="Why the name Qa3det Business?"
                 goals={[
-                  "Professional Administrative Skills",
-                  "Practical Experience That Bridges Theory And Real-World Application",
-                  "A Deep Understanding Of The Work Environment And Its Demands",
+                  "The name reflects a casual and friendly atmosphere, where deep business issues and realistic solutions are discussed to address the common challenges entrepreneurs face.",
                 ]}
                 extraDescription="This Program Does More Than Teach Basic Skills — It Shapes A Personality Ready To Face Challenges, Think Critically, Work Effectively In Teams, And Refine Leadership And Communication Abilities."
               />
@@ -146,7 +145,7 @@ export default function Qa3detBusiness() {
           {/* third */}
           <section className=" bg-custom-black">
             <div className="max-container">
-              <div className="py-5">
+              <div className=" pt-6  md:py-5">
                 <MainTittle title="Key Benefits" />
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-6 ">
@@ -194,7 +193,7 @@ export default function Qa3detBusiness() {
             </div>
           </section>
           {/* fourth */}
-          <section className="bg-custom-yellow">
+          <section className="bg-custom-gradient-bg">
             <div className="pt-5">
               <MainTittle title="About Tarek El-Tantawi" />
             </div>

@@ -131,7 +131,7 @@ export default function MarketingProgram() {
             showTitle={false}
           />
         </div>
-        <div className="mt-20">
+        <div className="mt-5">
           <RightPlace />
         </div>
       </section>

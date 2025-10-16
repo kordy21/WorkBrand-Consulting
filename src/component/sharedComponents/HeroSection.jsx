@@ -35,7 +35,7 @@ const HeroSection = ({ backgroundImage, title, description, buttonText }) => {
   return (
     <section
       className={`relative w-full flex items-center justify-center pt-[100px] lg:pt-0 
-        ${isSmallPage ? "h-[300px]" : "h-[400px] md:h-[500px]"}`}
+        ${isSmallPage ? "h-[300px]" : "h-[500px] md:h-[500px]"}`}
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
@@ -45,7 +45,10 @@ const HeroSection = ({ backgroundImage, title, description, buttonText }) => {
       <div className="absolute inset-0 bg-black bg-opacity-40"></div>
 
       <div
-        className={`relative z-10 flex flex-col items-center justify-center px-4 mb-4 text-white md:items-start max-w-[1000px] w-full`}
+        className={`relative z-10 flex flex-col 
+  items-center justify-center text-center  /* ✅ في الموبايل */
+  md:items-start md:text-left md:justify-start /* ✅ في الديسكتوب */
+  px-4 mb-8 text-white max-w-[1000px] w-full`}
       >
         <h1
           className={`mt-4 md:mb-4 font-bold ${
@@ -56,7 +59,7 @@ const HeroSection = ({ backgroundImage, title, description, buttonText }) => {
         </h1>
 
         <p
-          className={`flex max-w-3xl w-full p-5 md:p-0 text-left ${
+          className={`flex max-w-3xl w-full p-5 md:p-0 ${
             isSmallPage ? "text-base md:text-lg" : "text-lg md:text-lg"
           }`}
         >

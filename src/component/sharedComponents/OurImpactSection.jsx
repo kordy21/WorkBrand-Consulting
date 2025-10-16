@@ -4,7 +4,7 @@ import ImpactButtonCard from "./ImpactButtonCard";
 import { motion } from "framer-motion";
 import { fadeInUp, fadeInPlace } from "../../utils/motionVariants";
 
-const OurImpactSection = () => {
+const OurImpactSection = ({ title, description }) => {
   return (
     <section className="px-4 mb-12 max-container xl:px-0">
       <motion.div
@@ -13,19 +13,23 @@ const OurImpactSection = () => {
         viewport={{ once: true }}
         variants={fadeInPlace}
       >
+        <div className="mb-10">
+
         <MainTittle
-          title="Academic Credentials & Affiliations"
-          description="Key Stats That Show Our Real Growth"
+          title={title || "Academic Credentials & Affiliations"}
+          description={description || "Key Stats That Show Our Real Growth"}
         />
+        </div>
       </motion.div>
+
       <motion.div
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
         variants={fadeInUp}
       >
-        <div className="grid grid-cols-12  gap-6">
-          <div className="col-span-12 md:col-span-6 lg:col-span-3  md:pt-0">
+        <div className="grid grid-cols-12 gap-6">
+          <div className="col-span-12 md:col-span-6 lg:col-span-3 md:pt-0">
             <ImpactButtonCard
               icon={
                 <svg
@@ -44,12 +48,11 @@ const OurImpactSection = () => {
                 </svg>
               }
               number={26}
-              description="Years of business consulting and corporate management
-              consulting "
+              description="Years of business consulting and corporate management consulting"
             />
           </div>
 
-          <div className="col-span-12 md:col-span-6 lg:col-span-3 md:pt-0 ">
+          <div className="col-span-12 md:col-span-6 lg:col-span-3 md:pt-0">
             <ImpactButtonCard
               icon={
                 <svg
@@ -114,8 +117,7 @@ const OurImpactSection = () => {
                 </svg>
               }
               number={14}
-              description="In Strategic Management from the USA In Strategic Management from the USA
-"
+              description="In Strategic Management from the USA"
             />
           </div>
         </div>
