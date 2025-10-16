@@ -4,6 +4,7 @@ import CustomMainButton from "./CustomMainButton";
 import TripleArrowIcon from "./TripleArrowIcon";
 import { Link, useLocation } from "react-router-dom";
 import UnderLineForm from "./UnderLineForm";
+import TrainingForm from "../DR-Tarek-El-Tantawi/TrainingForm";
 
 const HeroSection = ({ backgroundImage, title, description, buttonText }) => {
   const location = useLocation();
@@ -17,17 +18,18 @@ const HeroSection = ({ backgroundImage, title, description, buttonText }) => {
       onClick={() => setIsPopupOpen(false)}
     >
       <div
-        className="bg-white rounded-2xl p-6 w-full max-w-[600px] mx-4 shadow-lg relative"
+        className="bg-white rounded-2xl p-6 w-full max-w-[700px] mx-4 shadow-lg relative"
         onClick={(e) => e.stopPropagation()}
       >
         <button
           onClick={() => setIsPopupOpen(false)}
-          className="absolute top-2 right-3 text-gray-600 hover:text-black text-2xl"
+          className="absolute top-2 left-3 text-gray-600 hover:text-black text-2xl"
         >
           ✖
         </button>
 
-        <UnderLineForm />
+        <TrainingForm />
+        
       </div>
     </div>
   );
