@@ -74,9 +74,9 @@ export default function InsightsSection() {
       />
 
       <div className="relative z-10 w-full px-6 md:px-12 lg:px-20 flex flex-col lg:flex-row items-center gap-12">
-        {/* 🖼 Left Side - Animated Image + Glowing Circles */}
-        <div className="relative w-full lg:w-1/2 px-5 flex justify-center items-center">
-          <div className="relative">
+        {/* 🖼 Left Side - Animated Image + Description + Glowing Circles */}
+        <div className="relative w-full lg:w-1/2 px-5 flex flex-col items-center">
+          <div className="relative mb-6">
             {[...Array(3)].map((_, i) => (
               <motion.div
                 key={i}
@@ -114,7 +114,6 @@ export default function InsightsSection() {
                   </span>
                 </h2>
 
-                {/* 🔥 Image with Animated Glow */}
                 <div className="relative group">
                   <motion.div
                     className="absolute inset-0 rounded-3xl blur-2xl"
@@ -140,6 +139,17 @@ export default function InsightsSection() {
                     transition={{ type: "spring", stiffness: 100, damping: 12 }}
                   />
                 </div>
+
+                <motion.div
+                  key={activeTab.id + "-desc"}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.5 }}
+                  className="mt-6 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-5 text-gray-300 shadow-[0_0_20px_rgba(0,0,0,0.3)]"
+                >
+                  <p>{activeTab.desc}</p>
+                </motion.div>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -195,7 +205,7 @@ export default function InsightsSection() {
 
           {/* 💬 Active Description */}
           <AnimatePresence mode="wait">
-            <motion.div
+            {/* <motion.div
               key={activeTab.id}
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
@@ -204,7 +214,7 @@ export default function InsightsSection() {
               className="mt-8 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-[0_0_25px_rgba(0,0,0,0.4)]"
             >
               <p className="text-gray-300 leading-relaxed">{activeTab.desc}</p>
-            </motion.div>
+            </motion.div> */}
           </AnimatePresence>
         </div>
       </div>
