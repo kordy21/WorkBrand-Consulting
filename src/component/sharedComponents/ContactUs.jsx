@@ -10,7 +10,13 @@ import {
   faFacebook,
   faInstagram,
   faTiktok,
+  faWhatsapp,
+  faLinkedin,
+  faTwitter,
+  faYoutube,
+  faSnapchat,
 } from "@fortawesome/free-brands-svg-icons";
+
 import UnderLineForm from "../sharedComponents/UnderLineForm";
 import translations from "../../locales/en.json";
 
@@ -51,7 +57,9 @@ const ContactUs = ({ phonesTel, phonesMob, email, address }) => {
 
           {/* Address */}
           <a
-            href="#"
+            href="https://maps.app.goo.gl/6AKiJt28VMgBRqNh9"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-start justify-start gap-3 text-white duration-300 hover:text-custom-blue group"
           >
             <MapPinIcon className="w-5 h-5 text-white duration-300 group-hover:text-custom-blue" />
@@ -67,19 +75,50 @@ const ContactUs = ({ phonesTel, phonesMob, email, address }) => {
             >
               <FontAwesomeIcon
                 icon={faFacebook}
-                className="text-white transition duration-300 hover:scale-105 hover:text-custom-blue"
+                className="text-white transition duration-300 hover:scale-105  hover:text-custom-blue"
               />
             </a>
             <a
-              href="https://www.instagram.com/_workbrand_/?hl=en"
+              href="https://www.instagram.com/workbrandeg/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FontAwesomeIcon
                 icon={faInstagram}
-                className="text-white transition duration-300 hover:scale-105 hover:text-custom-blue"
+                className="text-white transition duration-300 hover:scale-105  hover:text-custom-blue"
               />
             </a>
+
+            <a
+              href="https://eg.linkedin.com/company/workbrandeg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon
+                icon={faLinkedin}
+                className="text-white transition duration-300 hover:scale-105  hover:text-custom-blue"
+              />
+            </a>
+            <a
+              href="https://www.youtube.com/@workbrand1540"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon
+                icon={faYoutube}
+                className="text-white transition duration-300 hover:scale-105  hover:text-custom-blue"
+              />
+            </a>
+            {/* <a
+              href="https://wa.me/01029999210"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon
+                icon={faWhatsapp}
+                className="text-white transition duration-300 hover:scale-105 hover:text-custom-blue"
+              />
+            </a> */}
             <a
               href="https://www.tiktok.com/@workbrandeg?_t=ZS-8zOGn4WKW1q&_r=1"
               target="_blank"
@@ -87,7 +126,29 @@ const ContactUs = ({ phonesTel, phonesMob, email, address }) => {
             >
               <FontAwesomeIcon
                 icon={faTiktok}
-                className="text-white transition duration-300 hover:scale-105 hover:text-custom-blue"
+                className="text-white transition duration-300 hover:scale-105  hover:text-custom-blue"
+              />
+            </a>
+
+            <a
+              href="https://snapchat.com/t/2oJ9hqAZ"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon
+                icon={faSnapchat}
+                className="text-white transition duration-300 hover:scale-105  hover:text-custom-blue"
+              />
+            </a>
+
+            <a
+              href="https://x.com/workbrandeg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon
+                icon={faTwitter}
+                className="text-white transition duration-300 hover:scale-105  hover:text-custom-blue"
               />
             </a>
           </div>

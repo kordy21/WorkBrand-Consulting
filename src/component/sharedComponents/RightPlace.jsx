@@ -37,7 +37,7 @@ const RightPlace = () => {
           </div>
         </div>
       </div>
-      \ {showForm && <MeetingRoomsForm setShow={setShowForm} />}
+       {showForm && <MeetingRoomsForm setShow={setShowForm} />}
     </section>
   );
 };

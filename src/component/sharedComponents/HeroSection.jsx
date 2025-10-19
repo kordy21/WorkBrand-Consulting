@@ -1,23 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
 import CustomMainButton from "./CustomMainButton";
 import TripleArrowIcon from "./TripleArrowIcon";
-import { ReactComponent as WriteIcon } from "../../assets/Icons/write.svg";
 import { Link, useLocation } from "react-router-dom";
-const HeroSection = ({
-  backgroundImage,
-  title,
-  description,
-  buttonText,
-  buttonIcon,
-  onClick,
-}) => {
+import UnderLineForm from "./UnderLineForm";
+import TrainingForm from "../DR-Tarek-El-Tantawi/TrainingForm";
+
+const HeroSection = ({ backgroundImage, title, description, buttonText }) => {
   const location = useLocation();
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
   const pathnames = location.pathname.split("/").filter((x) => x);
-  const isSmallPage = location.pathname.includes("store-details"); 
+  const isSmallPage = location.pathname.includes("store-details");
+
+  const popupContent = (
+    <div
+      className="fixed inset-0 z-[9999] flex items-center justify-center bg-black bg-opacity-50"
+      onClick={() => setIsPopupOpen(false)}
+    >
+      <div
+        className="bg-white rounded-2xl p-6 w-full max-w-[700px] mx-4 shadow-lg relative"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button
+          onClick={() => setIsPopupOpen(false)}
+          className="absolute top-2 left-3 text-gray-600 hover:text-black text-2xl"
+        >
+          ✖
+        </button>
+
+        <TrainingForm />
+        
+      </div>
+    </div>
+  );
+
   return (
     <section
       className={`relative w-full flex items-center justify-center pt-[100px] lg:pt-0 
-    ${isSmallPage ? "h-[300px]" : "h-[400px] md:h-[500px]"}`}
+        ${isSmallPage ? "h-[300px]" : "h-[500px] md:h-[500px]"}`}
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
@@ -27,19 +47,21 @@ const HeroSection = ({
       <div className="absolute inset-0 bg-black bg-opacity-40"></div>
 
       <div
-        className={`relative z-10 flex flex-col items-center justify-center px-0 mb-4 text-white md:items-start ${
-          isSmallPage ? "pr-[150px] lg:pr-[750px]" : "lg:pr-56"
-        }`}
+        className={`relative z-10 flex flex-col 
+  items-center justify-center text-center  /* ✅ في الموبايل */
+  md:items-start md:text-left md:justify-start /* ✅ في الديسكتوب */
+  px-4 mb-8 text-white max-w-[1000px] w-full`}
       >
         <h1
-          className={`mb-4 font-bold ${
+          className={`mt-4 md:mb-4 font-bold ${
             isSmallPage ? "text-2xl md:text-4xl" : "text-3xl md:text-7xl"
           }`}
         >
           {title}
         </h1>
+
         <p
-          className={`flex max-w-3xl p-5 mx-auto text-center md:text-start md:p-0 ${
+          className={`flex max-w-3xl w-full p-5 md:p-0 ${
             isSmallPage ? "text-base md:text-lg" : "text-lg md:text-lg"
           }`}
         >
@@ -52,7 +74,7 @@ const HeroSection = ({
               text={buttonText}
               fullWidth
               TripleArrow={<TripleArrowIcon />}
-              onClick={onClick}
+              onClick={() => setIsPopupOpen(true)}
             />
           </div>
         )}
@@ -67,7 +89,7 @@ const HeroSection = ({
                 className="flex items-center space-x-2 text-custom-blue hover:text-white"
               >
                 <span>/</span>
-                <Link to={to} className="text-white hover:text-custom-blue">
+                <Link to={to} className="text-white hover:text-white">
                   {value.replace(/-/g, " ")}
                 </Link>
               </span>
@@ -75,6 +97,12 @@ const HeroSection = ({
           })}
         </nav>
       </div>
+
+      {isPopupOpen &&
+        ReactDOM.createPortal(
+          popupContent,
+          document.getElementById("popup-root")
+        )}
     </section>
   );
 };

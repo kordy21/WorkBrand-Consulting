@@ -10,17 +10,20 @@ import { motion } from "framer-motion";
 
 const LocationSection = () => {
   return (
-    <section className="px-4 mb-12 md:mb-0 xl:px-0 max-container">
+    <section className=" xl:px-0 max-container">
       <motion.div
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
         variants={fadeInPlace}
       >
-        <MainTittle
-          title="Consulting Services"
-          description="Tailored solutions designed to guide organizations, entrepreneurs, and professionals toward sustainable growth and measurable impact"
-        />
+        <div className=" py-6">
+          <MainTittle
+            title="Consulting Services"
+            description="Tailored solutions designed to guide organizations, entrepreneurs, and professionals toward sustainable growth and measurable impact"
+            color="text-custom-blue"
+          />
+        </div>
       </motion.div>
       <motion.div
         initial="hidden"
@@ -41,7 +44,7 @@ Career path evaluation and planning to shape future success"
               location="Giza, Egypt"
               buttonText="Explore Mohandessin Offices"
               link="/mohandessin-branch"
-              whiteBackground={true}
+              whiteBackground={false}
             />
           </div>
 
@@ -54,7 +57,7 @@ Financial and administrative consulting for performance enhancement Reserve your
               location="Cairo, Egypt"
               buttonText="Explore Nasr City Offices"
               link="/nasr-city-branch"
-              whiteBackground={true}
+              whiteBackground={false}
             />
           </div>
         </div>

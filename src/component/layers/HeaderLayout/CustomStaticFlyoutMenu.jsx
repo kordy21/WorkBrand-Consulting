@@ -76,7 +76,7 @@ const CustomStaticFlyoutMenu = ({ stickyNav, menuData }) => {
                 className={`
     flex flex-col items-start relative gap-1 text-white
     ${stickyNav ? "" : "text-base lg:text-sm xl:text-lg mr-5"} 
-    font-semibold rounded text-big-text-color
+    font-semibold rounded text-big-text-color cursor-pointer
     transition duration-300 ease-in-out 
   `}
                 aria-expanded={openMenu === menuName}

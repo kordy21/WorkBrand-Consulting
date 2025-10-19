@@ -15,7 +15,7 @@ const CustomMainButton = ({
   return (
     <button
       onClick={onClick}
-      className={`relative inline-flex items-center justify-center gap-3 px-4 py-2 text-sm text-white hover:text-black rounded-md lg:px-4 lg:py-1 sm:text-base group overflow-hidden
+      className={`relative inline-flex items-center  justify-center gap-3 px-4 py-4  text-sm text-white hover:text-black rounded-md lg:px-4 lg:py-1 sm:text-base group overflow-hidden
     ${
       fullWidth
         ? "w-full h-[50px] mx-auto px-5"

@@ -31,6 +31,8 @@ import ShoppingMenu from "./ShoppingMenu";
 import BellMenu from "./BellMenu";
 import MobileMenu from "./MobileMenu";
 
+const baseUrl = process.env.REACT_APP_BASE_URL;
+
 const menuDataDes = {
   Services: {
     dropdown: true,
@@ -40,9 +42,9 @@ const menuDataDes = {
     move: -150,
     footerText: "Explore our Services",
     footerLinks: [
-      { name: "Quick Links", link: "/coming-soon" },
-      { name: "Join Today", link: "/coming-soon" },
-      { name: "Contact Us", link: "/contact-us" },
+      { name: "Quick Links", link: `${baseUrl}/coming-soon` },
+      { name: "Join Today", link: `${baseUrl}/coming-soon` },
+      { name: "Contact Us", link: `${baseUrl}/contact-us` },
       // { name: "Download", link: "/coming-soon" },
     ],
     sections: [
@@ -50,19 +52,28 @@ const menuDataDes = {
         id: 1,
         headline1: "Workspaces",
         subItems: [
-          { name: "Private Offices", link: "/services/private-office" },
-          { name: "Virtual Office", link: "/services/virtual-office" },
-          { name: "Meeting Rooms", link: "/services/meeting-rooms" },
-          { name: "Training Rooms", link: "/services/training-rooms" },
+          {
+            name: "Private Offices",
+            link: `${baseUrl}/services/private-office`,
+          },
+          {
+            name: "Virtual Office",
+            link: `${baseUrl}/services/virtual-office`,
+          },
+          { name: "Meeting Rooms", link: `${baseUrl}/services/meeting-rooms` },
+          {
+            name: "Training Rooms",
+            link: `${baseUrl}/services/training-rooms`,
+          },
         ],
       },
       {
         id: 2,
         headline1: "",
         subItems: [
-          { name: "Training halls", link: "/coming-soon" },
-          { name: "Production Studio", link: "/coming-soon" },
-          { name: "Organizing events", link: "/coming-soon" },
+          { name: "Training halls", link: `${baseUrl}/coming-soon` },
+          { name: "Production Studio", link: `${baseUrl}/coming-soon` },
+          { name: "Organizing events", link: `${baseUrl}/coming-soon` },
         ],
       },
     ],
@@ -75,9 +86,9 @@ const menuDataDes = {
     move: -100,
     footerText: "Explore our Offices",
     footerLinks: [
-      { name: "Quick Links", link: "/coming-soon" },
-      { name: "Join Today", link: "/coming-soon" },
-      { name: "Contact Us", link: "/contact-us" },
+      { name: "Quick Links", link: `${baseUrl}/coming-soon` },
+      { name: "Join Today", link: `${baseUrl}/coming-soon` },
+      { name: "Contact Us", link: `${baseUrl}/contact-us` },
       // { name: "Download", link: "/coming-soon" },
     ],
     sections: [
@@ -85,8 +96,8 @@ const menuDataDes = {
         id: 1,
         headline1: "Offices",
         subItems: [
-          { name: "Mohandeseen Branch", link: "/mohandessin-branch" },
-          { name: "Nasr City Branch", link: "/nasr-city-branch" },
+          { name: "Mohandeseen Branch", link: `${baseUrl}/mohandessin-branch` },
+          { name: "Nasr City Branch", link: `${baseUrl}/nasr-city-branch` },
         ],
       },
     ],
@@ -99,9 +110,9 @@ const menuDataDes = {
     move: -50,
     footerText: "Shop at our Consulting",
     footerLinks: [
-      { name: "Quick Links", link: "/coming-soon" },
-      { name: "Join Today", link: "/coming-soon" },
-      { name: "Contact Us", link: "/contact-us" },
+      { name: "Quick Links", link: `${baseUrl}/coming-soon` },
+      { name: "Join Today", link: `${baseUrl}/coming-soon` },
+      { name: "Contact Us", link: `${baseUrl}/contact-us` },
       // { name: "Download", link: "/coming-soon" },
     ],
     sections: [
@@ -109,20 +120,20 @@ const menuDataDes = {
         id: 1,
         headline1: "Business Consulting",
         subItems: [
-          { name: "Book Your Consultation", link: "/coming-soon" },
-          { name: "Who We Are", link: "/coming-soon" },
-          { name: "Our Consulting Services", link: "/coming-soon" },
+          { name: "Book Your Consultation", link: `${baseUrl}/coming-soon` },
+          { name: "Who We Are", link: `${baseUrl}/coming-soon` },
+          { name: "Our Consulting Services", link: `${baseUrl}/coming-soon` },
         ],
       },
       {
         id: 2,
         headline1: "Training Programs",
         subItems: [
-          { name: "Book your training", link: "/coming-soon" },
-          { name: "About the Programs", link: "/coming-soon" },
-          { name: "Program Topics", link: "/coming-soon" },
-          { name: "The Trainer", link: "/coming-soon" },
-          { name: "Our Programs", link: "/coming-soon" },
+          { name: "Book your training", link: "/traning-program" },
+          { name: "About the Programs", link: "/traning-program" },
+          { name: "Program Topics", link: "/traning-program" },
+          { name: "The Trainer", link: "/traning-program" },
+          { name: "Our Programs", link: "/traning-program" },
         ],
       },
     ],
@@ -136,9 +147,9 @@ const menuDataDes = {
     move: 0,
     footerText: "Join our Media Agency",
     footerLinks: [
-      { name: "Quick Links", link: "/coming-soon" },
-      { name: "Join Today", link: "/coming-soon" },
-      { name: "Contact Us", link: "/contact-us" },
+      { name: "Quick Links", link: `${baseUrl}/coming-soon` },
+      { name: "Join Today", link: `${baseUrl}/coming-soon` },
+      { name: "Contact Us", link: `${baseUrl}contact-us` },
       // { name: "Download", link: "/coming-soon" },
     ],
     sections: [
@@ -146,14 +157,23 @@ const menuDataDes = {
         id: 1,
         headline1: "Media Agency Services",
         subItems: [
-          { name: "Media Coverage", link: "/coming-soon" },
-          { name: "Models Supply for Photoshoots", link: "/coming-soon" },
-          { name: "Voiceover Services", link: "/coming-soon" },
-          { name: "Podcast Hosting Services", link: "/coming-soon" },
-          { name: "Creative Development", link: "/coming-soon" },
+          { name: "Media Coverage", link: "http://agency.workbrand.org" },
+          {
+            name: "Models Supply for Photoshoots",
+            link: "http://agency.workbrand.org",
+          },
+          { name: "Voiceover Services", link: "http://agency.workbrand.org" },
+          {
+            name: "Podcast Hosting Services",
+            link: "http://agency.workbrand.org",
+          },
+          {
+            name: "Creative Development",
+            link: "http://agency.workbrand.org",
+          },
           {
             name: "Professional Studios",
-            link: "/coming-soon",
+            link: "http://agency.workbrand.org/studiomedia",
           },
         ],
       },
@@ -161,12 +181,15 @@ const menuDataDes = {
         id: 2,
         headline1: "    ",
         subItems: [
-          { name: "Video Production", link: "/coming-soon" },
-          { name: "Animation", link: "/coming-soon" },
-          { name: "Broadcast Video Production", link: "/coming-soon" },
-          { name: "Photography", link: "/coming-soon" },
-          { name: "Video Editing (Montage)", link: "/coming-soon" },
-          { name: "Media Coverage", link: "/coming-soon" },
+          { name: "Video Production", link: `${baseUrl}/coming-soon` },
+          { name: "Animation", link: `${baseUrl}/coming-soon` },
+          {
+            name: "Broadcast Video Production",
+            link: `${baseUrl}/coming-soon`,
+          },
+          { name: "Photography", link: `${baseUrl}/coming-soon` },
+          { name: "Video Editing (Montage)", link: `${baseUrl}/coming-soon` },
+          { name: "Media Coverage", link: `${baseUrl}/coming-soon` },
         ],
       },
     ],
@@ -185,9 +208,9 @@ const menuDataDes = {
     move: 100,
     footerText: "Read our Store",
     footerLinks: [
-      { name: "Quick Links", link: "/coming-soon" },
-      { name: "Join Today", link: "/coming-soon" },
-      { name: "Contact Us", link: "/contact-us" },
+      { name: "Quick Links", link: `${baseUrl}/coming-soon` },
+      { name: "Join Today", link: `${baseUrl}/coming-soon` },
+      { name: "Contact Us", link: `${baseUrl}/coming-soon` },
       // { name: "Download", link: "/coming-soon" },
     ],
     sections: [
@@ -195,18 +218,18 @@ const menuDataDes = {
         id: 1,
         headline1: "Featured Products",
         subItems: [
-          { name: "WorkBrand Branded Items", link: "/store" },
-          { name: "Monthly Deals", link: "/store" },
-          { name: "Equipment for Rent", link: "/store" },
+          { name: "WorkBrand Branded Items", link: `${baseUrl}/store` },
+          { name: "Monthly Deals", link: `${baseUrl}/store` },
+          { name: "Equipment for Rent", link: `${baseUrl}/store` },
         ],
       },
       {
         id: 2,
         headline1: "Services & Support",
         subItems: [
-          { name: "Custom Orders", link: "/store" },
-          { name: "Shipping & Returns", link: "/store" },
-          { name: "Help Center", link: "/store" },
+          { name: "Custom Orders", link: `${baseUrl}/store` },
+          { name: "Shipping & Returns", link: `${baseUrl}/store` },
+          { name: "Help Center", link: `${baseUrl}/store` },
         ],
       },
     ],
@@ -218,9 +241,9 @@ const menuDataDes = {
     move: 100,
     footerText: "Read our Store",
     footerLinks: [
-      { name: "Quick Links", link: "/coming-soon" },
-      { name: "Join Today", link: "/coming-soon" },
-      { name: "Contact Us", link: "/contact-us" },
+      { name: "Quick Links", link: `${baseUrl}/coming-soon` },
+      { name: "Join Today", link: `${baseUrl}/coming-soon` },
+      { name: "Contact Us", link: `${baseUrl}contact-us ` },
       // { name: "Download", link: "/coming-soon" },
     ],
     sections: [
@@ -228,18 +251,18 @@ const menuDataDes = {
         id: 1,
         headline1: "Insights",
         subItems: [
-          { name: "Articles", link: "/insights" },
-          { name: "Tips & Guides", link: "/insights" },
-          { name: "News & Updates", link: "/insights" },
+          { name: "Articles", link: `${baseUrl}insights` },
+          { name: "Tips & Guides", link: `${baseUrl}insights` },
+          { name: "News & Updates", link: `${baseUrl}insights` },
         ],
       },
       {
         id: 2,
         headline1: "Event",
         subItems: [
-          { name: "Upcoming Events", link: "/coming-soon" },
-          { name: "Past Events", link: "/coming-soon" },
-          { name: "Book an Event", link: "/coming-soon" },
+          { name: "Upcoming Events", link: `${baseUrl}/eventsingle` },
+          { name: "Past Events", link: `${baseUrl}/event` },
+          { name: "Book an Event", link: `${baseUrl}/coming-soon` },
         ],
       },
     ],
@@ -255,13 +278,22 @@ const menuDataMob = {
         id: 1,
         headline1: "Workspaces",
         subItems: [
-          { name: "Private Offices", link: "/services/private-office" },
-          { name: "Virtual Office", link: "/services/virtual-office" },
-          { name: "Meeting Rooms", link: "/services/meeting-rooms" },
-          { name: "Training Rooms", link: "/services/training-rooms" },
-          { name: "Training halls", link: "/coming-soon" },
-          { name: "Production Studio", link: "/coming-soon" },
-          { name: "Organizing events", link: "/coming-soon" },
+          {
+            name: "Private Offices",
+            link: `${baseUrl}/services/private-office`,
+          },
+          {
+            name: "Virtual Office",
+            link: `${baseUrl}/services/virtual-office`,
+          },
+          { name: "Meeting Rooms", link: `${baseUrl}/services/meeting-rooms` },
+          {
+            name: "Training Rooms",
+            link: `${baseUrl}/services/training-rooms`,
+          },
+          { name: "Training halls", link: `${baseUrl}/coming-soon` },
+          { name: "Production Studio", link: `${baseUrl}/coming-soon` },
+          { name: "Organizing events", link: `${baseUrl}/coming-soon` },
         ],
       },
     ],
@@ -274,8 +306,8 @@ const menuDataMob = {
         id: 1,
         headline1: "Offices",
         subItems: [
-          { name: "Mohandeseen Branch", link: "/mohandessin-branch" },
-          { name: "Nasr City Branch", link: "/nasr-city-branch" },
+          { name: "Mohandeseen Branch", link: `${baseUrl}/mohandessin-branch` },
+          { name: "Nasr City Branch", link: `${baseUrl}/nasr-city-branch` },
         ],
       },
     ],
@@ -288,20 +320,20 @@ const menuDataMob = {
         id: 1,
         headline1: "Business Consulting",
         subItems: [
-          { name: "Book Your Consultation", link: "/coming-soon" },
-          { name: "Who We Are", link: "/coming-soon" },
-          { name: "Our Consulting Services", link: "/coming-soon" },
+          { name: "Book Your Consultation", link: `${baseUrl}/coming-soon` },
+          { name: "Who We Are", link: `${baseUrl}/coming-soon` },
+          { name: "Our Consulting Services", link: `${baseUrl}/coming-soon` },
         ],
       },
       {
         id: 2,
         headline1: "Training Programs",
         subItems: [
-          { name: "Book your training", link: "/coming-soon" },
-          { name: "About the Programs", link: "/coming-soon" },
-          { name: "Program Topics", link: "/coming-soon" },
-          { name: "The Trainer", link: "/coming-soon" },
-          { name: "Our Programs", link: "/coming-soon" },
+          { name: "Book your training", link: "/traning-program" },
+          { name: "About the Programs", link: "/traning-program" },
+          { name: "Program Topics", link: "/traning-program" },
+          { name: "The Trainer", link: "/traning-program" },
+          { name: "Our Programs", link: "/traning-program" },
         ],
       },
     ],
@@ -314,21 +346,24 @@ const menuDataMob = {
         id: 1,
         headline1: "Media Agency Services",
         subItems: [
-          { name: "Media Coverage", link: "/coming-soon" },
-          { name: "Models Supply for Photoshoots", link: "/coming-soon" },
-          { name: "Voiceover Services", link: "/coming-soon" },
-          { name: "Podcast Hosting Services", link: "/coming-soon" },
-          { name: "Creative Development", link: "/coming-soon" },
+          { name: "Media Coverage", link: "http://agency.workbrand.org" },
+          {
+            name: "Models Supply for Photoshoots",
+            link: "http://agency.workbrand.org",
+          },
+          { name: "Voiceover Services", link: "http://agency.workbrand.org" },
+          {
+            name: "Podcast Hosting Services",
+            link: "http://agency.workbrand.org",
+          },
+          {
+            name: "Creative Development",
+            link: "http://agency.workbrand.org",
+          },
           {
             name: "Professional Studios",
-            link: "/coming-soon",
+            link: "http://agency.workbrand.org/studiomedia",
           },
-          { name: "Video Production", link: "/coming-soon" },
-          { name: "Animation", link: "/coming-soon" },
-          { name: "Broadcast Video Production", link: "/coming-soon" },
-          { name: "Photography", link: "/coming-soon" },
-          { name: "Video Editing (Montage)", link: "/coming-soon" },
-          { name: "Media Coverage", link: "/coming-soon" },
         ],
       },
     ],
@@ -346,18 +381,18 @@ const menuDataMob = {
         id: 1,
         headline1: "Featured Products",
         subItems: [
-          { name: "WorkBrand Branded Items", link: "/store" },
-          { name: "Monthly Deals", link: "/store" },
-          { name: "Equipment for Rent", link: "/store" },
+          { name: "WorkBrand Branded Items", link: `${baseUrl}/store` },
+          { name: "Monthly Deals", link: `${baseUrl}/store` },
+          { name: "Equipment for Rent", link: `${baseUrl}/store` },
         ],
       },
       {
         id: 2,
         headline1: "Services & Support",
         subItems: [
-          { name: "Custom Orders", link: "/store" },
-          { name: "Shipping & Returns", link: "/store" },
-          { name: "Help Center", link: "/store" },
+          { name: "Custom Orders", link: `${baseUrl}/store` },
+          { name: "Shipping & Returns", link: `${baseUrl}/store` },
+          { name: "Help Center", link: `${baseUrl}/store` },
         ],
       },
     ],
@@ -370,18 +405,18 @@ const menuDataMob = {
         id: 1,
         headline1: "Insights",
         subItems: [
-          { name: "Articles", link: "/coming-soon" },
-          { name: "Tips & Guides", link: "/coming-soon" },
-          { name: "News & Updates", link: "/coming-soon" },
+          { name: "Articles", link: `${baseUrl}/coming-soon` },
+          { name: "Tips & Guides", link: `${baseUrl}/coming-soon` },
+          { name: "News & Updates", link: `${baseUrl}/coming-soon` },
         ],
       },
       {
         id: 2,
         headline1: "Event",
         subItems: [
-          { name: "Upcoming Events", link: "/coming-soon" },
-          { name: "Past Events", link: "/coming-soon" },
-          { name: "Book an Event", link: "/coming-soon" },
+          { name: "Upcoming Events", link: `${baseUrl}/eventsingle` },
+          { name: "Past Events", link: `${baseUrl}/event` },
+          { name: "Book an Event", link: `${baseUrl}/coming-soon` },
         ],
       },
     ],
@@ -394,10 +429,10 @@ const menuDataMob = {
         id: 1,
         headline1: "Pages",
         subItems: [
-          { name: "About", link: "/about-us" },
-          { name: "Career", link: "/career" },
-          { name: "Location", link: "/location" },
-          { name: "Content", link: "/contact-us" },
+          { name: "About", link: `${baseUrl}/about-us` },
+          { name: "Career", link: `${baseUrl}/career` },
+          { name: "Location", link: `${baseUrl}/location` },
+          { name: "Content", link: `${baseUrl}/contact-us` },
         ],
       },
     ],
@@ -588,7 +623,9 @@ const toggleDropdown = (item) => {
                 text={t("Home")}
                 IconStart={HomeIcon}
                 hover_white={true}
-                onClick={() => navigate("/contact-us")}
+                onClick={() =>
+                  (window.location.href = "https://new.workbrand.org/")
+                }
               />
             </div>
             {/* menu Mobile */}

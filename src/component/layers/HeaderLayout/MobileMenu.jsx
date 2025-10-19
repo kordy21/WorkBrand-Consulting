@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "../../../assets/images/Logo WorkBrand.webp";
+import Logo from "../../../assets/images/logoworkbrandblue.webp";
 import LanguageDropdown from "../../sharedComponents/CustomDropDownLanguages";
 import {
   XMarkIcon,
@@ -15,7 +15,10 @@ import {
   faTwitter,
   faLinkedinIn,
   faYoutube,
+  faTiktok,
+  faSnapchatGhost,
 } from "@fortawesome/free-brands-svg-icons";
+
 
 const MobileMenu = ({
   isDropdownOpen,
@@ -160,23 +163,13 @@ const MobileMenu = ({
             </a>
 
             <a
-              href="https://www.instagram.com/_workbrand_/?hl=en"
+              href="https://www.instagram.com/workbrandeg/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 text-center text-custom-primary hover:text-black text-3xl"
             >
               <FontAwesomeIcon icon={faInstagram} />
             </a>
-
-            <a
-              href="https://x.com/workbrandeg"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 text-center text-custom-primary hover:text-black text-3xl"
-            >
-              <FontAwesomeIcon icon={faTwitter} />
-            </a>
-
             <a
               href="https://eg.linkedin.com/company/workbrandeg"
               target="_blank"
@@ -185,7 +178,6 @@ const MobileMenu = ({
             >
               <FontAwesomeIcon icon={faLinkedinIn} />
             </a>
-
             <a
               href="https://www.youtube.com/@workbrand1540"
               target="_blank"
@@ -193,6 +185,23 @@ const MobileMenu = ({
               className="flex-1 text-center text-custom-primary hover:text-black text-3xl"
             >
               <FontAwesomeIcon icon={faYoutube} />
+            </a>
+            <a
+              href="https://www.tiktok.com/@workbrandeg?_t=ZS-90as1k08P5k&_r=1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 text-center text-custom-primary hover:text-black text-3xl"
+            >
+              <FontAwesomeIcon icon={faTiktok} />
+            </a>
+
+            <a
+              href="https://snapchat.com/t/2oJ9hqAZ"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 text-center text-custom-primary hover:text-black text-3xl"
+            >
+              <FontAwesomeIcon icon={faSnapchatGhost} />
             </a>
           </div>
         </div>
