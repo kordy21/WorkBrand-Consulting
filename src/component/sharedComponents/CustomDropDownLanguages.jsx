@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
-// import arrow from "../../assets/Icons/Arrow Down.svg";
 import USImg from "../../assets/images/us.png";
 import flagSaudi from "../../assets/images/flagSaudi.webp";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";

@@ -1,7 +1,7 @@
 import React from "react";
 import HeaderLayout from "../component/layers/HeaderLayout/HeaderLayout";
 import HeroSection from "../component/sharedComponents/HeroSection";
-import marketing from "../assets/images/marketingpafe.webp";
+import marketing from "../assets/images/marketingpafe (2).webp";
 import AboutProgram from "../component/trainig program/AboutProgram";
 import markeeting from "..//assets/images/MARKETINNNNG.webp";
 import human1 from "../assets/images/human1.webp";

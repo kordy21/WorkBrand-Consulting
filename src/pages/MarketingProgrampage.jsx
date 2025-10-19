@@ -1,21 +1,21 @@
 import React from "react";
 import HeaderLayout from "../component/layers/HeaderLayout/HeaderLayout";
 import HeroSection from "../component/sharedComponents/HeroSection";
-import marketing from "../assets/images/marketingpafe .webp";
+import marketing from "../assets/images/marketingpafe1.webp";
 import AboutProgram from "../component/trainig program/AboutProgram";
-import markeeting from '..//assets/images/MARKETINNNNG.webp';
-import learn1 from '../assets/images/learn1.webp';
-import learn2 from '../assets/images/learn2.webp';
-import learn3 from '../assets/images/learn3.webp';
-import learn4 from '../assets/images/learn4.webp';
-import learn5 from '../assets/images/learn5.webp';
-import learn6 from '../assets/images/learn6.webp';
+import markeeting from "..//assets/images/MARKETINNNNG.webp";
+import learn1 from "../assets/images/learn1.webp";
+import learn2 from "../assets/images/learn2.webp";
+import learn3 from "../assets/images/learn3.webp";
+import learn4 from "../assets/images/learn4.webp";
+import learn5 from "../assets/images/learn5.webp";
+import learn6 from "../assets/images/learn6.webp";
 import MainTittle from "../component/sharedComponents/MainTittle";
 import CoursesGrid from "../component/Marketing Program/CourseCard";
 import KeyFeature from "../component/sharedComponents/KeyFeature";
-import realstate from '../assets/Icons/real state.svg';
-import hands from '../assets/Icons/hands.svg';
-import project from '../assets/Icons/projecct.svg';
+import realstate from "../assets/Icons/real state.svg";
+import hands from "../assets/Icons/hands.svg";
+import project from "../assets/Icons/projecct.svg";
 import RightPlace from "../component/sharedComponents/RightPlace";
 import Footer from "../component/sharedComponents/Footer";
 export default function MarketingProgram() {
@@ -56,26 +56,26 @@ export default function MarketingProgram() {
       description: "Create A Brand Image That Resonates And Builds Loyalty.",
     },
   ];
-const data = [
-  {
-    image: realstate,
-    tittle1: "Real-life case studies",
-    description:
-      "Learn from actual business scenarios to understand what works.",
-  },
-  {
-    image: hands,
-    tittle1: "Hands-on tool usage",
-    description:
-      "Practice using essential digital marketing tools and analytics platforms..",
-  },
-  {
-    image: project,
-    tittle1: "Project-based learning",
-    description:
-      "Apply what you learn in real projects to gain practical experience.",
-  },
-];
+  const data = [
+    {
+      image: realstate,
+      tittle1: "Real-life case studies",
+      description:
+        "Learn from actual business scenarios to understand what works.",
+    },
+    {
+      image: hands,
+      tittle1: "Hands-on tool usage",
+      description:
+        "Practice using essential digital marketing tools and analytics platforms..",
+    },
+    {
+      image: project,
+      tittle1: "Project-based learning",
+      description:
+        "Apply what you learn in real projects to gain practical experience.",
+    },
+  ];
   return (
     <main className="bg-custom-yellow">
       <HeaderLayout />
@@ -83,9 +83,8 @@ const data = [
         backgroundImage={marketing}
         title="Marketing & Digital Marketing Program"
         buttonText="Book your training"
-        
         description="An engaging environment to learn, discuss, and grow."
-      />{" "}
+      />
       {/* fisst */}
       <section className="bg-custom-black">
         <div className="max-container">
@@ -113,7 +112,7 @@ const data = [
       </section>
       {/* third */}
       <section className="bg-custom-yellow">
-        <div className=" pt-8 md:pt-12">
+        <div className="pt-8 md:pt-12">
           <MainTittle title="Training Approach" />
         </div>
         <div className="pt-5">

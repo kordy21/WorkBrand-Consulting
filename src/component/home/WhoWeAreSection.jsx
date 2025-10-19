@@ -11,16 +11,16 @@ const WhoWeAreSection = ({
   philosophyDescription,
 }) => {
   return (
-    <section className="max-container flex flex-col lg:flex-row items-center justify-center py-12 gap-5">
+    <section className="flex flex-col items-center justify-center gap-8 py-12 max-container lg:flex-row">
       {/* Mobile Title & Description */}
       <div className="block md:hidden">
         <MainTittle
           title={mobileTitle}
-          className="text-3xl lg:text-5xl font-bold mb-4"
+          className="mb-4 text-3xl font-bold lg:text-5xl"
           align="start"
         />
       </div>
-      <p className="text-gray-700 mb-0  md:mb-6 block md:hidden text-center">
+      <p className="block mb-0 text-center text-gray-700 md:mb-6 md:hidden">
         {mobileDescription}
       </p>
 
@@ -38,14 +38,14 @@ const WhoWeAreSection = ({
         <div className="hidden md:block">
           <MainTittle
             title={desktopTitle}
-            className="text-3xl lg:text-5xl font-bold mb-4"
+            className="mb-4 text-3xl font-bold lg:text-5xl"
             align="start"
           />
         </div>
 
 
-        <div className=" rounded-lg  ">
-          <p className="text-gray-700 text-center md:text-start p-5 md:p-0">
+        <div className="rounded-lg ">
+          <p className="p-5 text-center text-gray-700 md:text-start md:p-0">
             {philosophyDescription}
           </p>
         </div>

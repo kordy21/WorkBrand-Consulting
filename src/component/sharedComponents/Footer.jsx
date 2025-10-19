@@ -10,10 +10,9 @@ import {
   faTiktok,
   faYoutube,
   faInstagram,
-  faSnapchat, 
+  faSnapchat,
 } from "@fortawesome/free-brands-svg-icons";
 
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import arrow from "../../assets/Icons/arrowfooter.svg";
 
 export default function Footer() {
@@ -50,7 +49,7 @@ export default function Footer() {
 
   const importantLinks = {
     "Store ": `${baseUrl}/store`,
-    "Insights ":`${baseUrl}/insights`,
+    "Insights ": `${baseUrl}/insights`,
     "About Us": `${baseUrl}/about-us`,
     "Contact us": `${baseUrl}/contact-us`,
   };
@@ -191,7 +190,7 @@ export default function Footer() {
             <a href={item.link} target={item.target} rel="noopener noreferrer">
               <FontAwesomeIcon
                 icon={item.icon}
-                className="w-4 sm:w-5 p-1 sm:p-2 text-lg sm:text-lg duration-300 border rounded-full text-custom-blue group-hover:text-white border-white group-hover:border-white"
+                className="w-4 p-1 text-lg duration-300 border border-white rounded-full sm:w-5 sm:p-2 sm:text-lg text-custom-blue group-hover:text-white group-hover:border-white"
               />
             </a>
           </div>
@@ -253,12 +252,12 @@ export default function Footer() {
                 : "opacity-0 translate-y-3 pointer-events-none"
             }`}
           >
-            <div className="bg-green-500 text-white p-3 flex justify-between items-center">
+            <div className="flex items-center justify-between p-3 text-white bg-green-500">
               <span className="font-bold">Hi!</span>
               <button onClick={() => setShowWhatsOptions(false)}>✕</button>
             </div>
 
-            <div className="p-3 text-gray-700 text-sm border-b">
+            <div className="p-3 text-sm text-gray-700 border-b">
               Chat with one of our agent.
             </div>
 
@@ -267,7 +266,7 @@ export default function Footer() {
                 href="https://wa.me/201029999210"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 p-3 hover:bg-gray-100 transition text-black"
+                className="flex items-center gap-2 p-3 text-black transition hover:bg-gray-100"
               >
                 <span className="w-3 h-3 bg-green-500 rounded-full"></span>
                 Office Space
@@ -276,7 +275,7 @@ export default function Footer() {
                 href="https://wa.me/201011223344"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 p-3 text-black hover:bg-gray-100 transition"
+                className="flex items-center gap-2 p-3 text-black transition hover:bg-gray-100"
               >
                 <span className="w-3 h-3 bg-green-500 rounded-full"></span>
                 Media agency
@@ -285,14 +284,14 @@ export default function Footer() {
                 href="https://wa.me/201055667788"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 p-3 hover:bg-gray-100 transition text-black"
+                className="flex items-center gap-2 p-3 text-black transition hover:bg-gray-100"
               >
                 <span className="w-3 h-3 bg-green-500 rounded-full"></span>
                 Training & Consulting
               </a>
             </div>
 
-            <div className="p-2 text-xs text-gray-500 text-center border-t">
+            <div className="p-2 text-xs text-center text-gray-500 border-t">
               Use this feature to chat with our agent.
             </div>
           </div>

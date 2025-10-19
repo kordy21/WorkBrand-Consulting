@@ -52,7 +52,7 @@ const UnderLineForm = ({ showPosition = false, showResume = false }) => {
           </label>
           <input
             type="text"
-            className="w-full px-4 py-2 bg-transparent border-0 border-b-2 border-black outline-none hover:border-custom-blue"
+            className="w-full px-4 py-2 bg-transparent border-0 border-b-2 border-black outline-none hover:border-custom-blue bg-blu"
             // placeholder={`Enter ${underlineform.PhoneNumber}`}
           />
         </div>

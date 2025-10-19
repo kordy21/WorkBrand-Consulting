@@ -127,14 +127,14 @@ const Home = () => {
         />
       </section>
       <section className=" bg-gradient-to-br from-[#282727] to-[#151516]">
-        <div className="max-container">
+        {/* <div className="max-container"> */}
           <InsightsSection
             any="yes"
             data={insightsData}
             sectionTitle="Our Consulting Services"
             sectionDescription="Strategic Consulting tailored for companies, business owners, and professionals — designed to boost efficiency, streamline operations, and guide your business to sustainable growth."
           />
-        </div>
+        {/* </div> */}
       </section>
       <section className="max-container ">
         <ConsultingSection
@@ -146,7 +146,7 @@ const Home = () => {
             "Consulting Sessions With Strategic Expert Tarek El-Tantawi Provide A Deep And Useful Vision That Contributes To Achieving Success And Growth For Both Institutions And Individuals, Especially In Investment Solutions And Evaluation Of Innovative Ideas And Verifying Their Innovation Before Planning.",
           ]}
         />
-        <div className=" my-5 md:mt-10">
+        <div className="my-5 md:mt-10">
           <MainTitle title="Who is targeted?" />
         </div>
         <KeyFeature

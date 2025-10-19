@@ -15,13 +15,11 @@ import pexcel from "../assets/Icons/pexcel.svg";
 import sql from "../assets/Icons/sql.svg";
 import inventory from "../assets/Icons/inventory.svg";
 import practical from "../assets/Icons/practical.svg";
-import imagee from '../assets/images/bg--black.webp';
 import dataaa from "../assets/Icons/data.svg";
 import CardLocation from "../component/sharedComponents/CardLocation";
 import KeyFeature from "../component/sharedComponents/KeyFeature";
 import RightPlace from "../component/sharedComponents/RightPlace";
 import Footer from "../component/sharedComponents/Footer";
-import ModuleHelpSection from "../component/AI/ModuleHelpSection";
 import ProgramHighlights from "../component/DataAnalysis.jsx/ProgramHighlights";
 const DataAnalysis = () => {
   const data = [
@@ -119,7 +117,7 @@ const DataAnalysis = () => {
           <div className="pt-5 md:pt-8">
             <MainTittle title="What You’ll Learn" />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-6 ">
+          <div className="grid grid-cols-1 gap-6 pb-6 md:grid-cols-2 ">
             <CardLocation
               image={AI1}
               title="Sales Insights"
@@ -178,16 +176,15 @@ const DataAnalysis = () => {
           />
         </div>
       </section>
-      {/* fourth */}
       <section
-        className="relative bg-cover bg-center bg-no-repeat py-16"
+        className="relative py-16 bg-center bg-no-repeat bg-cover"
         style={{
           backgroundImage: `url(${require("../assets/images/bg--black.webp")})`,
         }}
       >
         <div className="absolute inset-0 bg-black/70"></div>
 
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-0 z-10">
+        <div className="relative z-10 px-6 mx-auto max-w-7xl lg:px-0">
           <ProgramHighlights />
         </div>
       </section>

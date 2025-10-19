@@ -72,140 +72,144 @@ export default function InsightsSection() {
         }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
-
-      <div className="relative z-10 w-full px-6 md:px-12 lg:px-20 flex flex-col lg:flex-row items-center gap-12">
-        {/* 🖼 Left Side - Animated Image + Description + Glowing Circles */}
-        <div className="relative w-full lg:w-1/2 px-5 flex flex-col items-center">
-          <div className="relative mb-6">
-            {[...Array(3)].map((_, i) => (
-              <motion.div
-                key={i}
-                className="absolute rounded-full border border-[#007bff30]"
-                style={{
-                  width: `${240 + i * 120}px`,
-                  height: `${240 + i * 120}px`,
-                  top: `-${i * 60}px`,
-                  left: `-${i * 60}px`,
-                }}
-                animate={{ opacity: [0.2, 0.5, 0.2], scale: [1, 1.04, 1] }}
-                transition={{
-                  duration: 6 + i,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              />
-            ))}
-
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeTab.id}
-                className="relative z-10 text-center"
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.6 }}
-              >
-                <h2 className="text-xl font-light tracking-widest mb-4">
-                  <span className="block text-gray-400 text-sm mb-1">
-                    Comprehensive
-                  </span>
-                  <span className="font-semibold text-3xl text-[#009dff]">
-                    Expertise
-                  </span>
-                </h2>
-
-                <div className="relative group">
-                  <motion.div
-                    className="absolute inset-0 rounded-3xl blur-2xl"
-                    style={{
-                      background:
-                        "linear-gradient(135deg, rgba(0,123,255,0.4), rgba(0,195,255,0.2))",
-                    }}
-                    animate={{
-                      opacity: [0.4, 0.7, 0.4],
-                      scale: [1, 1.05, 1],
-                    }}
-                    transition={{
-                      duration: 5,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    }}
-                  />
-                  <motion.img
-                    src={activeTab.image}
-                    alt={activeTab.title}
-                    className="relative rounded-3xl border border-[#007bff30] shadow-[0_0_45px_rgba(0,123,255,0.25)] group-hover:shadow-[0_0_70px_rgba(0,195,255,0.35)] transition-all duration-500"
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ type: "spring", stiffness: 100, damping: 12 }}
-                  />
-                </div>
-
+      <div className="max-container">
+        <div className="relative z-10 flex flex-col items-center w-full gap-12 px-6 md:px-12 lg:px-20 lg:flex-row">
+          {/* 🖼 Left Side - Animated Image + Description + Glowing Circles */}
+          <div className="relative flex flex-col items-center w-full px-5 lg:w-1/2">
+            <div className="relative mb-6">
+              {[...Array(3)].map((_, i) => (
                 <motion.div
-                  key={activeTab.id + "-desc"}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.5 }}
-                  className="mt-6 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-5 text-gray-300 shadow-[0_0_20px_rgba(0,0,0,0.3)]"
+                  key={i}
+                  className="absolute rounded-full border border-[#007bff30]"
+                  style={{
+                    width: `${240 + i * 120}px`,
+                    height: `${240 + i * 120}px`,
+                    top: `-${i * 60}px`,
+                    left: `-${i * 60}px`,
+                  }}
+                  animate={{ opacity: [0.2, 0.5, 0.2], scale: [1, 1.04, 1] }}
+                  transition={{
+                    duration: 6 + i,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                />
+              ))}
+
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeTab.id}
+                  className="relative z-10 text-center"
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{ duration: 0.6 }}
                 >
-                  <p>{activeTab.desc}</p>
+                  <h2 className="mb-4 text-xl font-light tracking-widest">
+                    <span className="block mb-1 text-sm text-gray-400">
+                      Comprehensive
+                    </span>
+                    <span className="font-semibold text-3xl text-[#009dff]">
+                      Expertise
+                    </span>
+                  </h2>
+
+                  <div className="relative group">
+                    <motion.div
+                      className="absolute inset-0 rounded-3xl blur-2xl"
+                      style={{
+                        background:
+                          "linear-gradient(135deg, rgba(0,123,255,0.4), rgba(0,195,255,0.2))",
+                      }}
+                      animate={{
+                        opacity: [0.4, 0.7, 0.4],
+                        scale: [1, 1.05, 1],
+                      }}
+                      transition={{
+                        duration: 5,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      }}
+                    />
+                    <motion.img
+                      src={activeTab.image}
+                      alt={activeTab.title}
+                      className="relative rounded-3xl border border-[#007bff30] shadow-[0_0_45px_rgba(0,123,255,0.25)] group-hover:shadow-[0_0_70px_rgba(0,195,255,0.35)] transition-all duration-500"
+                      whileHover={{ scale: 1.05 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 100,
+                        damping: 12,
+                      }}
+                    />
+                  </div>
+
+                  <motion.div
+                    key={activeTab.id + "-desc"}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.5 }}
+                    className="mt-6 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-5 text-gray-300 shadow-[0_0_20px_rgba(0,0,0,0.3)]"
+                  >
+                    <p>{activeTab.desc}</p>
+                  </motion.div>
                 </motion.div>
-              </motion.div>
-            </AnimatePresence>
-          </div>
-        </div>
-
-        {/* 📋 Right Side - Expertise List */}
-        <div className="w-full lg:w-1/2">
-          <motion.h3
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className="text-3xl md:text-4xl font-semibold mb-6 text-[#00aaff]"
-          >
-            Areas Of Expertise
-          </motion.h3>
-
-          <div className="space-y-3">
-            {expertiseData.map((item, i) => (
-              <motion.div
-                key={item.id}
-                onClick={() => setActiveTab(item)}
-                initial={{ x: 40, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: i * 0.08 }}
-                viewport={{ once: true }}
-                className={`flex items-center gap-4 cursor-pointer rounded-xl p-5 transition-all border backdrop-blur-sm ${
-                  activeTab.id === item.id
-                    ? "bg-white/5 border-[#00aaff50] shadow-[0_0_20px_rgba(0,170,255,0.2)]"
-                    : "bg-white/5 border-gray-700 hover:border-[#00aaff60]"
-                }`}
-              >
-                <div
-                  className={`flex items-center justify-center w-10 h-10 rounded-full border text-sm font-semibold ${
-                    activeTab.id === item.id
-                      ? "bg-[#00aaff15] border-[#00aaff60] text-[#00aaff]"
-                      : "bg-white/5 border-gray-600 text-gray-400"
-                  }`}
-                >
-                  {item.id}
-                </div>
-                <p
-                  className={`font-medium text-sm md:text-base ${
-                    activeTab.id === item.id
-                      ? "text-[#00aaff]"
-                      : "text-gray-300"
-                  }`}
-                >
-                  {item.title}
-                </p>
-              </motion.div>
-            ))}
+              </AnimatePresence>
+            </div>
           </div>
 
-          {/* 💬 Active Description */}
-          <AnimatePresence mode="wait">
-            {/* <motion.div
+          {/* 📋 Right Side - Expertise List */}
+          <div className="w-full lg:w-1/2">
+            <motion.h3
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              className="text-3xl md:text-4xl font-semibold mb-6 text-[#00aaff]"
+            >
+              Areas Of Expertise
+            </motion.h3>
+
+            <div className="space-y-3">
+              {expertiseData.map((item, i) => (
+                <motion.div
+                  key={item.id}
+                  onClick={() => setActiveTab(item)}
+                  initial={{ x: 40, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 0.5, delay: i * 0.08 }}
+                  viewport={{ once: true }}
+                  className={`flex items-center gap-4 cursor-pointer rounded-xl p-5 transition-all border backdrop-blur-sm ${
+                    activeTab.id === item.id
+                      ? "bg-white/5 border-[#00aaff50] shadow-[0_0_20px_rgba(0,170,255,0.2)]"
+                      : "bg-white/5 border-gray-700 hover:border-[#00aaff60]"
+                  }`}
+                >
+                  <div
+                    className={`flex items-center justify-center w-10 h-10 rounded-full border text-sm font-semibold ${
+                      activeTab.id === item.id
+                        ? "bg-[#00aaff15] border-[#00aaff60] text-[#00aaff]"
+                        : "bg-white/5 border-gray-600 text-gray-400"
+                    }`}
+                  >
+                    {item.id}
+                  </div>
+                  <p
+                    className={`font-medium text-sm md:text-base ${
+                      activeTab.id === item.id
+                        ? "text-[#00aaff]"
+                        : "text-gray-300"
+                    }`}
+                  >
+                    {item.title}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* 💬 Active Description */}
+            <AnimatePresence mode="wait">
+              {/* <motion.div
               key={activeTab.id}
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
@@ -213,9 +217,10 @@ export default function InsightsSection() {
               transition={{ duration: 0.5 }}
               className="mt-8 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-[0_0_25px_rgba(0,0,0,0.4)]"
             >
-              <p className="text-gray-300 leading-relaxed">{activeTab.desc}</p>
+              <p className="leading-relaxed text-gray-300">{activeTab.desc}</p>
             </motion.div> */}
-          </AnimatePresence>
+            </AnimatePresence>
+          </div>
         </div>
       </div>
     </section>

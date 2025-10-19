@@ -2,7 +2,7 @@ import { useState } from "react";
 import CustomMainButton from "../sharedComponents/CustomMainButton";
 import AAii from "../../assets/images/AAii.webp";
 import TripleArrowIcon from "../sharedComponents/TripleArrowIcon";
-import UnderLineForm from "../sharedComponents/UnderLineForm"; 
+import UnderLineForm from "../sharedComponents/UnderLineForm";
 
 export default function AIPowerSection() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -13,18 +13,18 @@ export default function AIPowerSection() {
   };
 
   return (
-    <section className="bg-[#1a1a1a] text-white flex flex-col md:flex-row items-center justify-between rounded-2xl overflow-hidden shadow-lg md:py-8">
+    <section className="flex flex-col items-center justify-between overflow-hidden text-white shadow-lg md:flex-row rounded-2xl md:py-8">
       {/* Left Image */}
       <div className="w-full md:w-1/2">
-        <img src={AAii} alt="AI Power" className="w-full h-full object-cover" />
+        <img src={AAii} alt="AI Power" className="object-cover w-full h-full" />
       </div>
 
       {/* Right Content */}
-      <div className="w-full md:w-1/2 p-8 md:p-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-custom-blue leading-snug mb-4">
+      <div className="w-full p-8 md:w-1/2 md:p-12">
+        <h2 className="mb-4 text-3xl font-bold leading-snug md:text-4xl text-custom-blue">
           The Power Of Artificial <br /> Intelligence (AI)
         </h2>
-        <p className="text-gray-300 text-sm md:text-base mb-6 leading-relaxed">
+        <p className="mb-6 text-sm leading-relaxed text-gray-300 md:text-base">
           In today’s modern workplace, Artificial Intelligence (AI) is a
           powerful tool that helps individuals enhance their managerial skills
           and increase their opportunities in the job market. In this module, we
@@ -54,7 +54,7 @@ export default function AIPowerSection() {
             >
               <button
                 onClick={() => setIsPopupOpen(false)}
-                className="absolute top-2 right-3 text-gray-600 hover:text-black text-2xl"
+                className="absolute text-2xl text-gray-600 top-2 right-3 hover:text-black"
               >
                 ✖
               </button>

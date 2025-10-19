@@ -4,38 +4,32 @@ import OurImpactSection from "../sharedComponents/OurImpactSection";
 import InsightsSection from "../home/InsightsSwction";
 import Footer from "../sharedComponents/Footer";
 import HeroSection from "../sharedComponents/HeroSection";
-import Doctor from "../../assets/images/Doctor.webp";
 import tarek from "../../assets/images/tannntawy.webp";
 import WhoWeAreSection from "../home/WhoWeAreSection";
-import ConsultingSection from "../home/ConsultingSection";
-import benfit from "../../assets/images/beneft.webp";
-import KeyFeature from "../sharedComponents/KeyFeature";
 import icon1 from "../../assets/Icons/madrasra.svg";
 import icon2 from "../../assets/Icons/mahkama.svg";
 import icon3 from "../../assets/Icons/project.svg";
 import icon4 from "../../assets/Icons/lamba.svg";
 import icon5 from "../../assets/Icons/121212.svg";
-import icon6 from "../../assets/Icons/121212.svg";
 import MainTitle from "../sharedComponents/MainTittle";
-import RightPlace from "../sharedComponents/RightPlace";
-import Qualifications from '../DR-Tarek-El-Tantawi/Qualifications';
-import AuthorThoughtLeader from '../DR-Tarek-El-Tantawi/AuthorThoughtLeader';
+import Qualifications from "../DR-Tarek-El-Tantawi/Qualifications";
+import AuthorThoughtLeader from "../DR-Tarek-El-Tantawi/AuthorThoughtLeader";
 import Strategic from "../../assets/images/Strategic.webp";
-import model  from "../../assets/images/Model.webp";
+import model from "../../assets/images/Model.webp";
 import Governmental from "../../assets/images/Governmental.webp";
 import Human from "../../assets/images/Human.webp";
 import Corporate from "../../assets/images/japan.webp";
 import Coaching from "../../assets/images/japan1.webp";
 import Brand from "../../assets/images/Brand.webp";
-import LocationSection from '../sharedComponents/LocationSection'
+import LocationSection from "../sharedComponents/LocationSection";
 import ContactUs from "../sharedComponents/ContactUs";
-import MapSection from "../SingleService/MapSection";
-import ProgramsSection  from '../DR-Tarek-El-Tantawi/ProgramsSection';
-import doctor from "../../assets/images/drtantawy.webp"; 
+import ProgramsSection from "../DR-Tarek-El-Tantawi/ProgramsSection";
+import doctor from "../../assets/images/drtantawy.webp";
 import GuidingPhilosophy from "../DR-Tarek-El-Tantawi/GuidingPhilosophy";
 import phd from "../../assets/images/PhD.webp";
 import MBA from "../../assets/images/MBA.webp";
 import Masters from "../../assets/images/Master’s.webp";
+import MapSection from "../sharedComponents/MapSection";
 const insightsData = [
   {
     image: Strategic,
@@ -153,7 +147,7 @@ const tarektantawi = () => {
 
         <Qualifications qualifications={qualificationsData} />
       </section>
-      <section className="w-full pt-12">
+      <section className="w-full pt-12 ">
         <AuthorThoughtLeader />
       </section>
       <section>

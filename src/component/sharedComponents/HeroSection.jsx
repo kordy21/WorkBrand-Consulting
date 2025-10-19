@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import CustomMainButton from "./CustomMainButton";
 import TripleArrowIcon from "./TripleArrowIcon";
 import { Link, useLocation } from "react-router-dom";
-import UnderLineForm from "./UnderLineForm";
 import TrainingForm from "../DR-Tarek-El-Tantawi/TrainingForm";
 
 const HeroSection = ({ backgroundImage, title, description, buttonText }) => {
@@ -23,13 +22,12 @@ const HeroSection = ({ backgroundImage, title, description, buttonText }) => {
       >
         <button
           onClick={() => setIsPopupOpen(false)}
-          className="absolute top-2 left-3 text-gray-600 hover:text-black text-2xl"
+          className="absolute text-2xl text-gray-600 top-2 left-3 hover:text-black"
         >
           ✖
         </button>
 
         <TrainingForm />
-        
       </div>
     </div>
   );
@@ -44,17 +42,17 @@ const HeroSection = ({ backgroundImage, title, description, buttonText }) => {
         backgroundPosition: "center",
       }}
     >
-      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent"></div>
 
       <div
         className={`relative z-10 flex flex-col 
-  items-center justify-center text-center  /* ✅ في الموبايل */
-  md:items-start md:text-left md:justify-start /* ✅ في الديسكتوب */
+  items-center justify-center text-center  
+  md:items-start md:text-left md:justify-start 
   px-4 mb-8 text-white max-w-[1000px] w-full`}
       >
         <h1
           className={`mt-4 md:mb-4 font-bold ${
-            isSmallPage ? "text-2xl md:text-4xl" : "text-3xl md:text-7xl"
+            isSmallPage ? "text-2xl md:text-4xl" : "text-3xl md:text-6xl"
           }`}
         >
           {title}
@@ -79,8 +77,8 @@ const HeroSection = ({ backgroundImage, title, description, buttonText }) => {
           </div>
         )}
 
-        <nav className="flex items-center space-x-2 text-white text-sm mt-4">
-          <Link to="/">Home</Link>
+        <nav className="flex items-center mt-4 space-x-2 text-sm text-white">
+          <Link to="/">Consultaltion</Link>
           {pathnames.map((value, index) => {
             const to = `/${pathnames.slice(0, index + 1).join("/")}`;
             return (

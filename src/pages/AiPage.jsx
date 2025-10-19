@@ -2,7 +2,7 @@ import React from "react";
 import HeaderLayout from "../component/layers/HeaderLayout/HeaderLayout";
 import HeroSection from "../component/sharedComponents/HeroSection";
 import ai from '../assets/images/AIII.webp';
-import AAi from '../assets/images/aiedit.jpg';
+import AAi from '../assets/images/aiedit.webp';
 import AboutProgram from "../component/trainig program/AboutProgram";
 import MainTittle from "../component/sharedComponents/MainTittle";
 import AI1 from '../assets/images/AI1.webp';
@@ -115,7 +115,7 @@ const data = [
           <div className="py-5 md:pt-8">
             <MainTittle title="Key Benefits" />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-6 ">
+          <div className="grid grid-cols-1 gap-6 pb-6 md:grid-cols-2 ">
             <CardLocation
               image={AI1}
               title="A Brief History of AI"
@@ -175,7 +175,6 @@ const data = [
           />
         </div>
       </section>
-      {/* fourth */}
       <section className="bg-custom-yellow">
         <div className="pt-16">
           <MainTittle title="How Will This Module Help You?" />
