@@ -14,7 +14,7 @@ module.exports = {
         "custom-blue": "#16486D",
       },
       backgroundImage: {
-        "custom-gradient-blue": "linear-gradient(#2F658E, #16486D)",
+        "custom-gradient-blue": "linear-gradient(#16486D, #2F658E)",
         "custom-gradient-black":
           "linear-gradient(3deg, #151414 13%, #282727 80%)",
         "custom-gradient-orange": "linear-gradient(90deg, #D4A850, #C08000)",
