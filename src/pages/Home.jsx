@@ -146,16 +146,16 @@ const Home = () => {
             "Consulting Sessions With Strategic Expert Tarek El-Tantawi Provide A Deep And Useful Vision That Contributes To Achieving Success And Growth For Both Institutions And Individuals, Especially In Investment Solutions And Evaluation Of Innovative Ideas And Verifying Their Innovation Before Planning.",
           ]}
         />
-        <div className="my-5 md:mt-10">
+        <div className=" flex  flex-col gap-5   p-5 md:pb-12 md:px-5 ">
           <MainTitle title="Who is targeted?" />
-        </div>
         <KeyFeature
           title="Our Features"
           align="center"
           white={true}
           icons={data}
           showTitle={false}
-        />
+          />
+          </div>
 
         <RightPlace />
       </section>

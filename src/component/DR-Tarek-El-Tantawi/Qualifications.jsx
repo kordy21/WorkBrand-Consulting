@@ -12,9 +12,9 @@ export default function QualificationsGrid({
   };
 
   return (
-    <section className=" pt-5 md:pt-8">
+    <section className=" flex flex-col   gap-5  ">
       {showTitle && (
-        <div className="pb-6 text-center">
+        <div className=" text-center">
           <MainTitle title="Academic Credentials & Affiliations" />
         </div>
       )}
@@ -45,7 +45,7 @@ export default function QualificationsGrid({
       </div>
 
       {visibleCount < qualifications.length && (
-        <div className="flex justify-center mt-8">
+        <div className="flex justify-center ">
           <button
             onClick={handleShowMore}
             className="relative inline-flex items-center justify-center gap-3 px-6 py-3 text-base font-medium text-white bg-custom-blue rounded-md hover:bg-white hover:text-black border border-transparent hover:border-black transition-all duration-300"

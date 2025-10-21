@@ -58,7 +58,7 @@ export default function InsightsSection() {
   }, []);
 
   return (
-    <section className="relative w-full overflow-hidden py-24 text-white bg-[#0b0b0c]">
+    <section className="relative w-full overflow-hidden py-12 text-white bg-[#0b0b0c]">
       {/* 🔹 Elegant Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#141414] via-[#0b0b0c] to-[#1a1a1a]" />
       <motion.div
@@ -73,7 +73,7 @@ export default function InsightsSection() {
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
       <div className="max-container">
-        <div className="relative z-10 flex flex-col items-center w-full gap-12 px-6 md:px-12 lg:px-20 lg:flex-row">
+        <div className="relative z-10 flex flex-col items-center w-full gap-12 px-5 md:px-5 lg:px-5 lg:flex-row">
           {/* 🖼 Left Side - Animated Image + Description + Glowing Circles */}
           <div className="relative flex flex-col items-center w-full px-5 lg:w-1/2">
             <div className="relative mb-6">

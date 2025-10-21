@@ -229,7 +229,7 @@ export default function TrainingProgram() {
         isSmall={true}
       />
       {/* fisst */}
-      <section className="pb-8 bg-custom-black">
+      <section className=" bg-custom-black">
         <div className="max-container">
           <AboutProgram
             imageSrc={Trainig1}
@@ -246,26 +246,23 @@ export default function TrainingProgram() {
         </div>
       </section>
       {/* second  */}
-      <section className="pb-8 bg-white ">
-        <div className="max-container">
-          <div className="pt-7 md:pt-8">
-            <MainTittle
-              title="Program Topics"
-              description="WorkBrand Media Agency covers every stage of creative production, offering a full-circle experience"
-            />
-          </div>
+      <section className="bg-white">
+        <div className="max-container flex flex-col gap-8 py-5 md:py-12">
+          <MainTittle
+            title="Program Topics"
+            description="WorkBrand Media Agency covers every stage of creative production, offering a full-circle experience"
+          />
           <QualificationsGrid
             qualifications={qualificationsData}
             showTitle={false}
           />
         </div>
       </section>
+
       {/* third */}
-      <section className="pb-5 bg-custom-black">
-        <div className="py-5 md:py-8">
+      <section className=" bg-custom-black">
+        <div className="flex flex-col gap-5 py-5 md:pt-12">
           <MainTittle title="Main Program Objectives" />
-        </div>
-        <div>
           <KeyFeature
             title="Features"
             icons={featuresData}
@@ -310,13 +307,11 @@ export default function TrainingProgram() {
       </section>
       {/*sex  */}
       <section>
-        <div className="pt-5">
+        <div className="max-container py-5 md:py-12">
           <MainTittle
             title="Our Program"
             description="Years of experience… delivered through our professional training services"
           />
-        </div>
-        <div className="max-container">
           <ProgramCardGrid programs={programsData} />
         </div>
       </section>

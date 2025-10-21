@@ -11,7 +11,7 @@ const WhoWeAreSection = ({
   philosophyDescription,
 }) => {
   return (
-    <section className="flex flex-col items-center justify-center gap-8 py-12 max-container lg:flex-row">
+    <section className="flex flex-col items-center justify-center gap-6 py-6 md:py-12 max-container lg:flex-row">
       {/* Mobile Title & Description */}
       <div className="block md:hidden">
         <MainTittle

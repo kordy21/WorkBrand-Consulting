@@ -6,7 +6,7 @@ import { fadeInUp, fadeInPlace } from "../../utils/motionVariants";
 
 const OurImpactSection = ({ title, description }) => {
   return (
-    <section className="px-4 mb-12 max-container xl:px-0">
+    <section className="p-5 md:pb-12  max-container ">
       <motion.div
         initial="hidden"
         whileInView="show"

@@ -8,7 +8,7 @@ const RightPlace = () => {
 
   return (
     <section className="mb-12 max-container">
-      <div className="py-8 mx-4 shadow-lg lg:py-16 xl:mx-0 bg-custom-gradient-card rounded-3xl">
+      <div className="py-5 mx-5 shadow-lg lg:pb-12 xl:mx-0 bg-custom-gradient-card rounded-3xl">
         <div className="max-w-3xl px-6 mx-auto text-center">
           <h2 className="mb-4 text-2xl font-bold leading-snug md:text-5xl text-custom-blue">
             Start From <span className="text-black">The Right Place</span>

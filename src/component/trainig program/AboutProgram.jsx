@@ -11,7 +11,7 @@ export default function AboutProgram({
 }) {
   return (
     <div
-      className={`flex flex-col lg:flex-row gap-6    text-white pt-8 px-5 md:px-0 rounded-lg ${
+      className={`flex flex-col lg:flex-row gap-6    text-white p-5  md:px-0 md:py-12  rounded-lg ${
         showBorder ? "border border-gray-300" : ""
       }`}
     >

@@ -13,14 +13,14 @@ export default function AIPowerSection() {
   };
 
   return (
-    <section className="flex flex-col items-center justify-between overflow-hidden text-white shadow-lg md:flex-row rounded-2xl md:py-8">
+    <section className="flex flex-col items-center justify-between overflow-hidden text-white shadow-lg md:flex-row rounded-2xl p-5  md:py-12">
       {/* Left Image */}
       <div className="w-full md:w-1/2">
         <img src={AAii} alt="AI Power" className="object-cover w-full h-full" />
       </div>
 
       {/* Right Content */}
-      <div className="w-full p-8 md:w-1/2 md:p-12">
+      <div className="w-full p-5 md:w-1/2 md:py-12 md:px-5">
         <h2 className="mb-4 text-3xl font-bold leading-snug md:text-4xl text-custom-blue">
           The Power Of Artificial <br /> Intelligence (AI)
         </h2>

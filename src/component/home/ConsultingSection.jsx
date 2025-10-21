@@ -3,7 +3,7 @@ import MainTitle from "../sharedComponents/MainTittle";
 
 const ConsultingSection = ({ image, title, paragraphs }) => {
   return (
-    <section className="flex flex-col md:flex-row items-center gap-8  p-6 md:p-12">
+    <section className="flex flex-col md:flex-row items-center gap-6  p-5 md:py-12 md:px-5">
       <div className="w-full  md:w-1/2">
         <img
           src={image}

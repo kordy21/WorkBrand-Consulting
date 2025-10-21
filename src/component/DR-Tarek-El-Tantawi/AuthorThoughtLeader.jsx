@@ -23,7 +23,7 @@ const AuthorThoughtLeader = () => {
         }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       >
-        <div className="grid items-center grid-cols-1 gap-6 py-12 max-container md:grid-cols-2">
+        <div className="grid items-center grid-cols-1 gap-5 py-12 max-container md:grid-cols-2">
           <div className="rounded-2xl overflow-hidden shadow-lg w-full md:w-[100%] mx-auto">
             <img
               src={doctor}

@@ -147,7 +147,7 @@ const tarektantawi = () => {
 
         <Qualifications qualifications={qualificationsData} />
       </section>
-      <section className="w-full pt-12 ">
+      <section className="w-fullp-5   ">
         <AuthorThoughtLeader />
       </section>
       <section>
@@ -182,6 +182,7 @@ const tarektantawi = () => {
           ctaText="Start Your Consultation"
           ctaLink="/traning-program"
         />
+        
         <MainTitle
           title="Contact Us- "
           subdescription=" Lets Talk"
