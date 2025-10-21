@@ -12,7 +12,7 @@ export default function QualificationsGrid({
   };
 
   return (
-    <section className=" flex flex-col   gap-5  ">
+    <section className=" flex flex-col p-5 md:px-0 md:pb-12 gap-5  ">
       {showTitle && (
         <div className=" text-center">
           <MainTitle title="Academic Credentials & Affiliations" />

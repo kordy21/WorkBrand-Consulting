@@ -4,47 +4,48 @@ import { useState, useEffect } from "react";
 const expertiseData = [
   {
     id: 1,
-    title: "Executive Coaching & Leadership",
-    desc: "Helping executives unlock their full potential, strengthen leadership skills, and build high-performing teams through data-driven coaching frameworks.",
+    title: "Restructuring Consulting",
+    desc: "Guiding businesses through comprehensive restructuring strategies to optimize operations, enhance efficiency, and achieve sustainable growth.",
     image:
       "https://images.unsplash.com/photo-1556761175-4b46a572b786?w=900&fm=webp",
   },
   {
     id: 2,
-    title: "Strategic Planning & Organizational Transformation",
-    desc: "Guiding organizations to reimagine their strategic direction and execute transformative plans that drive sustainable growth.",
+    title: "Career Development Consultancy",
+    desc: "Providing tailored programs and mentorship to develop talent, enhance career progression, and strengthen organizational capabilities.",
     image:
       "https://images.unsplash.com/photo-1532619187608-e5375cab36aa?w=900&fm=webp",
   },
   {
     id: 3,
-    title: "Business Model Innovation & Market Expansion",
-    desc: "Identifying innovative business models and expansion opportunities that align with evolving markets and technologies.",
+    title: "Investment Consultancy",
+    desc: "Offering expert guidance on investment strategies, capital allocation, and portfolio management to maximize returns and minimize risks.",
     image:
       "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=900&fm=webp",
   },
   {
     id: 4,
-    title: "Human Capital Development",
-    desc: "Designing initiatives to nurture talent, strengthen employee engagement, and build resilient corporate cultures.",
+    title: "Corporate Valuation Consultancy",
+    desc: "Providing accurate and strategic business valuations to support mergers, acquisitions, fundraising, and long-term corporate planning.",
     image:
       "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900&fm=webp",
   },
   {
     id: 5,
-    title: "Governmental Advisory & Policy Implementation",
-    desc: "Collaborating with governments to shape policies and implement programs focused on economic resilience and innovation.",
+    title: "Dispute Resolution Consulting",
+    desc: "Helping organizations resolve conflicts efficiently through negotiation, mediation, and risk-conscious strategies.",
     image:
       "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=900&fm=webp",
   },
   {
     id: 6,
-    title: "Brand Identity & Personal Branding",
-    desc: "Crafting distinctive brand identities and personal brand strategies that elevate visibility and credibility in competitive markets.",
+    title: "Legal Advisory",
+    desc: "Providing expert legal counsel to organizations and executives, ensuring compliance, mitigating risks, and supporting strategic decision-making.",
     image:
       "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=900&fm=webp",
   },
 ];
+
 
 export default function InsightsSection() {
   const [activeTab, setActiveTab] = useState(expertiseData[0]);
